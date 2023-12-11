@@ -1,0 +1,29 @@
+# Follow instruction in https://pub.dev/packages/flutter_flavorizr
+
+flavors:
+  production:
+    app:
+      name: "QR Scanner"
+      icon: "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    android:
+      applicationId: "com.neil.qr_code_scanner"
+    ios:
+      bundleId: "com.neil.qr_code_scanner"
+
+  development:
+    app:
+      name: "[DEV] QR Scanner"
+      icon: "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    android:
+      applicationId: "com.neil.qr_code_scanner.dev"
+    ios:
+      bundleId: "com.neil.qr_code_scanner.dev"
+
+  staging:
+    app:
+      name: "[STAG] QR Scanner"
+      icon: "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    android:
+      applicationId: "com.neil.qr_code_scanner.uat"
+    ios:
+      bundleId: "com.neil.qr_code_scanner.uat"
