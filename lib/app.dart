@@ -1,44 +1,23 @@
-import 'package:flutter/foundation.dart';
+import 'package:chucker_flutter/chucker_flutter.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-
-import 'flavors.dart';
-import 'pages/home/my_home_page.dart';
+import 'package:qr_code_scanner/config/system.dart';
+import 'package:qr_code_scanner/core/app_theme.dart';
+import 'package:qr_code_scanner/flavors.dart';
 
 class App extends StatelessWidget {
-
   const App({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: F.title,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: _flavorBanner(
-        child: MyHomePage(),
-        show: kDebugMode,
-      ),
-    );
-  }
-
-  Widget _flavorBanner({
-    required Widget child,
-    bool show = true,
-  }) =>
-      show
-          ? Banner(
-        child: child,
-        location: BannerLocation.topStart,
-        message: F.name,
-        color: Colors.green.withOpacity(0.6),
-        textStyle: TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: 12.0,
-            letterSpacing: 1.0),
-        textDirection: TextDirection.ltr,
-      )
-          : Container(
-        child: child,
+  Widget build(BuildContext context) => MaterialApp(
+        title: F.title,
+        navigatorObservers: [ChuckerFlutter.navigatorObserver],
+        debugShowCheckedModeBanner: false,
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: System.mainLocale,
+        themeMode: ThemeMode.light,
+        theme: AppTheme.lightAppTheme,
+        home: const Center(),
       );
 }
