@@ -24,8 +24,7 @@ class AppHelper {
   }
 
   static bool checkFormatDateOfBirth(String value) {
-    final regularExpression =
-        RegExp(r'^(3[01]|[12][0-9]|0[1-9])-(1[0-2]|0[1-9])-[0-9]{4}$');
+    final regularExpression = RegExp(r'^(3[01]|[12][0-9]|0[1-9])-(1[0-2]|0[1-9])-[0-9]{4}$');
     return regularExpression.hasMatch(value);
   }
 
@@ -48,7 +47,6 @@ class AppHelper {
       return timeConverted;
     }
   }
-
 
   static String convertDateReverse(String date) {
     if (date == '' || date.trim() == '') {
@@ -197,23 +195,20 @@ class AppHelper {
 
   static void copyPhoneExtension(String? content, BuildContext context) {
     Clipboard.setData(ClipboardData(text: content ?? '')).then((_) {
-      ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Số điện thoại đã được sao chép!")));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Số điện thoại đã được sao chép!")));
     });
   }
 
   static void copyMailExtension(String? content, BuildContext context) {
     Clipboard.setData(ClipboardData(text: content ?? '')).then((_) {
-      ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Email đã được sao chép!")));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Email đã được sao chép!")));
     });
   }
 
   static Future<void> makeCallExtension(String contactNumber) async {
     final Uri _phoneUri = Uri(scheme: "tel", path: contactNumber);
     try {
-      if (await UrlLauncher.canLaunch(_phoneUri.toString()))
-        await UrlLauncher.launch(_phoneUri.toString());
+      if (await UrlLauncher.canLaunch(_phoneUri.toString())) await UrlLauncher.launch(_phoneUri.toString());
     } catch (error) {
       throw ("Cannot dial");
     }
@@ -222,8 +217,7 @@ class AppHelper {
   static Future<void> sendMessageExtension(String contactNumber) async {
     final Uri _phoneUri = Uri(scheme: "sms", path: contactNumber);
     try {
-      if (await UrlLauncher.canLaunch(_phoneUri.toString()))
-        await UrlLauncher.launch(_phoneUri.toString());
+      if (await UrlLauncher.canLaunch(_phoneUri.toString())) await UrlLauncher.launch(_phoneUri.toString());
     } catch (error) {
       throw ("Cannot dial");
     }
@@ -235,8 +229,7 @@ class AppHelper {
       path: contactNumber,
     );
     try {
-      if (await UrlLauncher.canLaunch(_phoneUri.toString()))
-        await UrlLauncher.launch(_phoneUri.toString());
+      if (await UrlLauncher.canLaunch(_phoneUri.toString())) await UrlLauncher.launch(_phoneUri.toString());
     } catch (error) {
       throw ("Cannot dial");
     }
