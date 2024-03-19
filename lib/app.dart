@@ -18,6 +18,8 @@ class App extends StatelessWidget {
         locale: System.mainLocale,
         themeMode: ThemeMode.light,
         theme: AppTheme.lightAppTheme,
-        home: const Center(),
+        home: Scaffold(
+          appBar: AppBar(title: const Text('Hello')),
+        ),
       );
 }

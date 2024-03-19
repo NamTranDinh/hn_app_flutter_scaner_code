@@ -12,11 +12,11 @@ class F {
   static String get title {
     switch (appFlavor) {
       case Flavor.production:
-        return 'QR Scanner';
+        return 'Master QR';
       case Flavor.development:
-        return '[DEV] QR Scanner';
+        return '[DEV] Master QR';
       case Flavor.staging:
-        return '[STAG] QR Scanner';
+        return '[STAG] Master QR';
       default:
         return 'title';
     }

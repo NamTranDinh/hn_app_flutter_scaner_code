@@ -31,17 +31,17 @@ android {
         production {
             dimension "flavor-type"
             applicationId "com.neil.qr_code_scanner"
-            resValue "string", "app_name", "QR Scanner"
+            resValue "string", "app_name", "Master QR"
         }
         development {
             dimension "flavor-type"
             applicationId "com.neil.qr_code_scanner.dev"
-            resValue "string", "app_name", "[DEV] QR Scanner"
+            resValue "string", "app_name", "[DEV] Master QR"
         }
         staging {
             dimension "flavor-type"
             applicationId "com.neil.qr_code_scanner.uat"
-            resValue "string", "app_name", "[STAG] QR Scanner"
+            resValue "string", "app_name", "[STAG] Master QR"
         }
     }
 
