@@ -15,7 +15,7 @@ dependencies:
   dio: ^5.4.0
   get_it: ^7.6.7
   chucker_flutter: ^1.6.3
-  permission_handler: ^11.0.1
+#  permission_handler: ^11.0.1
   flutter_lints: ^2.0.0
   flutter_flavorizr: ^2.2.1
 

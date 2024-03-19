@@ -104,6 +104,9 @@ class AppColor {
   static const Color statusOverdue = Color(0xFFF9BEC4);
   static const Color boxShadow = Color(0xffDDDDDD);
   static const Color pinkPrimary = Color(0xffF47F88);
+  static const Color grey = Color(0xff333333);
+  static const Color naviBlue = Color(0xff2D3047);
+  static const Color whiteLight = Color(0xffd9d9d9);
 
   /// *** Recommended Usage:
   /// Title texts, captions, input fields and everywhere else where black is required: AppColor.black

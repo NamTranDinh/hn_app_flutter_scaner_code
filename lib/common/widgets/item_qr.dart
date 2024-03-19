@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:qr_code_scanner/core/app_color.dart';
 
 class ItemQr extends StatelessWidget {
   const ItemQr({super.key, required this.iconSrc, required this.textValue, required this.onTap});
@@ -22,7 +23,7 @@ class ItemQr extends StatelessWidget {
               width: 86,
               height: 82,
               child: DecoratedBox(
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: const Color(0xff333333)),
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: AppColor.grey),
                 child: SvgPicture.asset(
                   iconSrc,
                   width: 40,
@@ -35,10 +36,10 @@ class ItemQr extends StatelessWidget {
               width: 57,
               height: 22,
               alignment: Alignment.center,
-              decoration: BoxDecoration(color: const Color(0xffd9d9d9), borderRadius: BorderRadius.circular(4)),
+              decoration: BoxDecoration(color: AppColor.whiteLight, borderRadius: BorderRadius.circular(4)),
               child: Text(
                 textValue,
-                style: const TextStyle(color: Color(0xff2D3047), fontSize: 12),
+                style: const TextStyle(color: AppColor.naviBlue, fontSize: 12),
               ),
             )
           ],

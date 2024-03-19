@@ -13,6 +13,7 @@ import 'package:qr_code_scanner/di.dart';
 
 FutureOr<void> main() async {
   ChuckerFlutter.showOnRelease = false;
+  WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   if (kDebugMode) Bloc.observer = const AppBlocObserver();
   await init();
