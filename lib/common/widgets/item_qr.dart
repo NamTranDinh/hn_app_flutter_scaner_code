@@ -8,7 +8,7 @@ class ItemQr extends StatelessWidget {
   final double height = 92;
   final String iconSrc;
   final String textValue;
-  final Function onTap;
+  final Function() onTap;
 
   @override
   Widget build(BuildContext context) => SizedBox(
