@@ -1,11 +1,9 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:qr_code_scanner/common/widgets/item_qr.dart';
 
 import 'flavors.dart';
-import 'pages/home/my_home_page.dart';
 
 class App extends StatelessWidget {
-
   const App({Key? key}) : super(key: key);
 
   @override
@@ -15,9 +13,12 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: _flavorBanner(
-        child: MyHomePage(),
-        show: kDebugMode,
+      home: Center(
+        child: ItemQr(
+          iconSrc: "assets/icons/icon_wifi.svg",
+          textValue: "wifi",
+          onTap: () {},
+        ),
       ),
     );
   }
@@ -28,17 +29,14 @@ class App extends StatelessWidget {
   }) =>
       show
           ? Banner(
-        child: child,
-        location: BannerLocation.topStart,
-        message: F.name,
-        color: Colors.green.withOpacity(0.6),
-        textStyle: TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: 12.0,
-            letterSpacing: 1.0),
-        textDirection: TextDirection.ltr,
-      )
+              child: child,
+              location: BannerLocation.topStart,
+              message: F.name,
+              color: Colors.green.withOpacity(0.6),
+              textStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 12.0, letterSpacing: 1.0),
+              textDirection: TextDirection.ltr,
+            )
           : Container(
-        child: child,
-      );
+              child: child,
+            );
 }

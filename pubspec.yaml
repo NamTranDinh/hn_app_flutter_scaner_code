@@ -23,6 +23,7 @@ dependencies:
   infinite_scroll_pagination: ^4.0.0
   flutter_animate: ^4.2.0+1
   flutter_flavorizr: ^2.2.1
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
