@@ -9,6 +9,25 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsAnimGen {
+  const $AssetsAnimGen();
+
+  /// File path: assets/anim/anim_connect_page_not_found.json
+  String get animConnectPageNotFound =>
+      'assets/anim/anim_connect_page_not_found.json';
+
+  /// File path: assets/anim/anim_dinosaur_page_not_found.json
+  String get animDinosaurPageNotFound =>
+      'assets/anim/anim_dinosaur_page_not_found.json';
+
+  /// File path: assets/anim/anim_loading_qr.json
+  String get animLoadingQr => 'assets/anim/anim_loading_qr.json';
+
+  /// List of all assets
+  List<String> get values =>
+      [animConnectPageNotFound, animDinosaurPageNotFound, animLoadingQr];
+}
+
 class $AssetsI18nGen {
   const $AssetsI18nGen();
 
@@ -52,6 +71,7 @@ class $AssetsImagesGen {
 class Assets {
   Assets._();
 
+  static const $AssetsAnimGen anim = $AssetsAnimGen();
   static const $AssetsI18nGen i18n = $AssetsI18nGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
