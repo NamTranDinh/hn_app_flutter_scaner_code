@@ -279,7 +279,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					331C8080294A63A400263BE5 = {
@@ -771,8 +771,8 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
 				ENABLE_BITCODE = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1099,8 +1099,8 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
 				ENABLE_BITCODE = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1123,8 +1123,8 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
 				ENABLE_BITCODE = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1359,7 +1359,7 @@
 			baseConfigurationReference = EF272D4C1E8C15904A66D17E /* Pods-Runner.debug-production.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arrowhitech.masterqrcode;
 				PRODUCT_NAME = Runner;
 			};
@@ -1370,7 +1370,7 @@
 			baseConfigurationReference = 6A659EF9848E8C26069ED1FE /* Pods-Runner.profile-production.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arrowhitech.masterqrcode;
 				PRODUCT_NAME = Runner;
 			};
@@ -1381,7 +1381,7 @@
 			baseConfigurationReference = C7C824AFA0C0B5EBBF18BD27 /* Pods-Runner.release-production.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arrowhitech.masterqrcode;
 				PRODUCT_NAME = Runner;
 			};
@@ -1392,7 +1392,7 @@
 			baseConfigurationReference = 62F90BFF31D58C3BF79DDE23 /* Pods-Runner.debug-development.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arrowhitech.masterqrcode.stag;
 				PRODUCT_NAME = Runner;
 			};
@@ -1403,7 +1403,7 @@
 			baseConfigurationReference = 28CC7EDD9E9BEA3A9576243B /* Pods-Runner.profile-development.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arrowhitech.masterqrcode.stag;
 				PRODUCT_NAME = Runner;
 			};
@@ -1414,7 +1414,7 @@
 			baseConfigurationReference = A66264295567E9997A35BB3A /* Pods-Runner.release-development.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arrowhitech.masterqrcode.stag;
 				PRODUCT_NAME = Runner;
 			};
@@ -1425,7 +1425,7 @@
 			baseConfigurationReference = D2C3D0601B7264D041670330 /* Pods-Runner.debug-staging.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arrowhitech.masterqrcode.stag;
 				PRODUCT_NAME = Runner;
 			};
@@ -1436,7 +1436,7 @@
 			baseConfigurationReference = 12D817FA821212414A983D1D /* Pods-Runner.profile-staging.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arrowhitech.masterqrcode.stag;
 				PRODUCT_NAME = Runner;
 			};
@@ -1447,7 +1447,7 @@
 			baseConfigurationReference = BD6494496064BE358E9CFCFA /* Pods-Runner.release-staging.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = CW9D6R2KKQ;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arrowhitech.masterqrcode.stag;
 				PRODUCT_NAME = Runner;
 			};
