@@ -23,9 +23,16 @@ class $AssetsAnimGen {
   /// File path: assets/anim/anim_loading_qr.json
   String get animLoadingQr => 'assets/anim/anim_loading_qr.json';
 
+  /// File path: assets/anim/anim_splash.json
+  String get animSplash => 'assets/anim/anim_splash.json';
+
   /// List of all assets
-  List<String> get values =>
-      [animConnectPageNotFound, animDinosaurPageNotFound, animLoadingQr];
+  List<String> get values => [
+        animConnectPageNotFound,
+        animDinosaurPageNotFound,
+        animLoadingQr,
+        animSplash
+      ];
 }
 
 class $AssetsI18nGen {
