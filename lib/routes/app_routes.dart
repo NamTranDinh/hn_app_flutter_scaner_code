@@ -1,30 +1,61 @@
 import 'package:flutter/cupertino.dart';
-import 'package:go_router/go_router.dart';
+import 'package:get/get_instance/src/bindings_interface.dart';
+import 'package:get/get_navigation/src/routes/custom_transition.dart';
+import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:get/get_navigation/src/routes/route_middleware.dart';
+import 'package:get/get_navigation/src/routes/transitions_type.dart';
+import 'package:qr_code_scanner/di.dart';
 import 'package:qr_code_scanner/pages/home/my_home_page.dart';
-import 'package:qr_code_scanner/pages/not_found_page/not_found_page.dart';
 import 'package:qr_code_scanner/pages/splash/splash_page.dart';
 import 'package:qr_code_scanner/routes/routes.dart';
 
+final getPage = getIt.get<AppRouter>();
+
 class AppRouter {
-  static final _rootNavigatorKey = GlobalKey<NavigatorState>();
-  // static final _shellNavigatorKey = GlobalKey<NavigatorState>();
+  List<GetPage> get routes => <GetPage>[
+        _getPage(
+          name: Routes.splashNamedPage,
+          page: () => const SplashPage(),
+        ),
+        _getPage(
+          name: Routes.homeNamedPage,
+          page: () => const MyHomePage(),
+        ),
+      ];
 
-  static final GoRouter _router = GoRouter(
-    // initialLocation: Routes.splashNamedPage,
-    debugLogDiagnostics: true,
-    navigatorKey: _rootNavigatorKey,
-    routes: [
-      GoRoute(
-        path: Routes.splashNamedPage,
-        builder: (context, state) => const SplashPage(),
-      ),
-      GoRoute(
-        path: Routes.homeNamedPage,
-        builder: (context, state) => const MyHomePage(),
-      ),
-    ],
-    errorBuilder: (context, state) => const NotFoundPage(),
-  );
-
-  static GoRouter get router => _router;
+  /// Here are some commonly used attributes,
+  /// if you need more you can add them below
+  GetPage _getPage({
+    required String name,
+    required Widget Function() page,
+    Object? args,
+    Transition? transition,
+    CustomTransition? customTransition,
+    Duration? transitionDuration,
+    List<Bindings>? bindings,
+    bool? fullscreenDialog,
+    bool? preventDuplicates,
+    bool? opaque,
+    bool? maintainState,
+    Curve? curve,
+    Alignment? alignment,
+    List<GetMiddleware>? middlewares,
+  }) =>
+      GetPage(
+        name: name,
+        page: page,
+        arguments: args,
+        bindings: bindings ?? [],
+        middlewares: middlewares,
+        fullscreenDialog: fullscreenDialog ?? false,
+        preventDuplicates: preventDuplicates ?? true,
+        maintainState: maintainState ?? true,
+        opaque: opaque ?? true,
+        curve: curve ?? Curves.linear,
+        alignment: alignment,
+        transition: transition ?? Transition.rightToLeft,
+        transitionDuration: transitionDuration,
+        customTransition: customTransition,
+        /** Additional attributes*/
+      );
 }
