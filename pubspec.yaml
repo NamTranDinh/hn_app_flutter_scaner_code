@@ -12,6 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  base_core:
+    path: packages/base_core
+
   dio: ^5.4.0
   get_it: ^7.6.7
   chucker_flutter: ^1.6.3
@@ -33,6 +36,8 @@ dependencies:
   go_router: ^13.2.1
   lottie: ^3.1.0
   flutter_screenutil: ^5.9.0
+  path: ^1.8.3
+  flutter_native_splash: ^2.3.11
 
 dev_dependencies:
   flutter_test:

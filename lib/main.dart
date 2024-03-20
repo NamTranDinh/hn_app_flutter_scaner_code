@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_code_scanner/app.dart';
-import 'package:qr_code_scanner/common/blocs/bloc_observer.dart';
+import 'package:qr_code_scanner/blocs/observer/bloc_observer.dart';
 import 'package:qr_code_scanner/config/system.dart';
 import 'package:qr_code_scanner/di.dart';
 

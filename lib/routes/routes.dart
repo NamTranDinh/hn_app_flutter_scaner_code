@@ -1,4 +1,4 @@
 class Routes {
-  static String splashNamedPage = '/splashNamedPage';
+  static String splashNamedPage = '/';
   static String homeNamedPage = '/homeNamedPage';
 }
