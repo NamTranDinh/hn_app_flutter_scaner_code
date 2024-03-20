@@ -107,6 +107,8 @@ class AppColor {
   static const Color grey = Color(0xff333333);
   static const Color naviBlue = Color(0xff2D3047);
   static const Color whiteLight = Color(0xffd9d9d9);
+  static const Color whiteLight2 = Color(0xffE2E2E2);
+  static const Color whiteLight3 = Color(0xffC3C7C7);
 
   /// *** Recommended Usage:
   /// Title texts, captions, input fields and everywhere else where black is required: AppColor.black

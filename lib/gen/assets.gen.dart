@@ -35,8 +35,11 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_wifi.svg
   String get iconWifi => 'assets/icons/icon_wifi.svg';
 
+  /// File path: assets/icons/share.svg
+  String get share => 'assets/icons/share.svg';
+
   /// List of all assets
-  List<String> get values => [bell, iconLink, iconText, iconWifi];
+  List<String> get values => [bell, iconLink, iconText, iconWifi, share];
 }
 
 class Assets {
