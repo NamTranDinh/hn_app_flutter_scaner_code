@@ -1,5 +1,6 @@
 library base_core;
 
+export 'src/base_cubit/base_cubit_state.dart';
 export 'src/base_enum.dart';
 export 'src/base_environment.dart';
 export 'src/base_helper.dart';

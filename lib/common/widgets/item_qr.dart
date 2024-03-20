@@ -41,7 +41,7 @@ class ItemQr extends StatelessWidget {
                 textValue,
                 style: const TextStyle(color: AppColor.naviBlue, fontSize: 12),
               ),
-            )
+            ),
           ],
         ),
       );

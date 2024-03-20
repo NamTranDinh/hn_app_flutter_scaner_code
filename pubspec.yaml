@@ -12,6 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  base_core:
+    path: packages/base_core
+
   dio: ^5.4.0
   get_it: ^7.6.7
   chucker_flutter: ^1.6.3
@@ -30,6 +33,11 @@ dependencies:
   infinite_scroll_pagination: ^4.0.0
   flutter_animate: ^4.2.0+1
   flutter_svg: ^2.0.10+1
+  go_router: ^13.2.1
+  lottie: ^3.1.0
+  flutter_screenutil: ^5.9.0
+  path: ^1.8.3
+  flutter_native_splash: ^2.3.11
 
 dev_dependencies:
   flutter_test:
