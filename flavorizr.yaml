@@ -6,24 +6,24 @@ flavors:
       name: "Master QR"
       icon: "assets/images/app_icon.png"
     android:
-      applicationId: "com.neil.qr_code_scanner"
+      applicationId: "com.arrowhitech.masterqrcode"
     ios:
-      bundleId: "com.neil.qr_code_scanner"
+      bundleId: "com.arrowhitech.masterqrcode"
 
   development:
     app:
       name: "[DEV] Master QR"
       icon: "assets/images/app_icon.png"
     android:
-      applicationId: "com.neil.qr_code_scanner.dev"
+      applicationId: "com.arrowhitech.masterqrcode.dev"
     ios:
-      bundleId: "com.neil.qr_code_scanner.dev"
+      bundleId: "com.arrowhitech.masterqrcode.dev"
 
   staging:
     app:
       name: "[STAG] Master QR"
       icon: "assets/images/app_icon.png"
     android:
-      applicationId: "com.neil.qr_code_scanner.uat"
+      applicationId: "com.arrowhitech.masterqrcode.stag"
     ios:
-      bundleId: "com.neil.qr_code_scanner.uat"
+      bundleId: "com.arrowhitech.masterqrcode.stag"

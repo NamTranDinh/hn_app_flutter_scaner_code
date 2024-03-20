@@ -30,17 +30,17 @@ android {
     productFlavors {
         production {
             dimension "flavor-type"
-            applicationId "com.neil.qr_code_scanner"
+            applicationId "com.arrowhitech.masterqrcode"
             resValue "string", "app_name", "Master QR"
         }
         development {
             dimension "flavor-type"
-            applicationId "com.neil.qr_code_scanner.dev"
+            applicationId "com.arrowhitech.masterqrcode.dev"
             resValue "string", "app_name", "[DEV] Master QR"
         }
         staging {
             dimension "flavor-type"
-            applicationId "com.neil.qr_code_scanner.uat"
+            applicationId "com.arrowhitech.masterqrcode.stag"
             resValue "string", "app_name", "[STAG] Master QR"
         }
     }
