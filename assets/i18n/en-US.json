@@ -2,5 +2,11 @@
   "page_not_found": {
     "oops": "Oops!",
     "description": "We can't seen to find the page you're looking for."
+  },
+  "home_page": {
+    "nav_bar": {
+      "generate": "Generate",
+      "history": "History"
+    }
   }
 }

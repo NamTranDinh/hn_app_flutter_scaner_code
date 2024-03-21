@@ -8,11 +8,11 @@ class AppTheme {
   static ThemeData lightAppTheme = ThemeData(
     useMaterial3: false,
     fontFamily: FontFamily.openSans,
-    splashColor: AppColor.primaryGreen[10],
-    highlightColor: AppColor.primaryGreen[10],
-    indicatorColor: AppColor.primaryGreen,
+    splashColor: AppColor.primaryYellow[10]?.withOpacity(.5),
+    highlightColor: AppColor.primaryYellow[10],
+    indicatorColor: AppColor.primaryYellow,
     scaffoldBackgroundColor: Colors.white,
-    appBarTheme: const AppBarTheme(color: Color(0xFF669835), centerTitle: true),
+    appBarTheme: const AppBarTheme(color: AppColor.grey, centerTitle: true),
     dialogTheme: const DialogTheme(
       backgroundColor: AppColor.white,
       alignment: Alignment.center,

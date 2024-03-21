@@ -51,8 +51,17 @@ class $AssetsI18nGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/icon_history.svg
+  String get iconHistory => 'assets/icons/icon_history.svg';
+
   /// File path: assets/icons/icon_link.svg
   String get iconLink => 'assets/icons/icon_link.svg';
+
+  /// File path: assets/icons/icon_qrcode.svg
+  String get iconQrcode => 'assets/icons/icon_qrcode.svg';
+
+  /// File path: assets/icons/icon_scan.svg
+  String get iconScan => 'assets/icons/icon_scan.svg';
 
   /// File path: assets/icons/icon_text.svg
   String get iconText => 'assets/icons/icon_text.svg';
@@ -61,7 +70,8 @@ class $AssetsIconsGen {
   String get iconWifi => 'assets/icons/icon_wifi.svg';
 
   /// List of all assets
-  List<String> get values => [iconLink, iconText, iconWifi];
+  List<String> get values =>
+      [iconHistory, iconLink, iconQrcode, iconScan, iconText, iconWifi];
 }
 
 class $AssetsImagesGen {
