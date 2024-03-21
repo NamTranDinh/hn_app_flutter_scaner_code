@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:qr_code_scanner/blocs/navbar/navbar_cubit.dart';
 import 'package:qr_code_scanner/blocs/splash/splash_cubit.dart';
 
 final getIt = GetIt.instance;
@@ -9,7 +10,9 @@ Future<void> init() async {
    * │ cubits
    * └──────────────────────────────────────────────────────────────────────────
    */
-  getIt.registerFactory(SplashCubit.new);
+  getIt
+    ..registerFactory(SplashCubit.new)
+    ..registerFactory(NavbarCubit.new);
 
   /**
    * ┌──────────────────────────────────────────────────────────────────────────
@@ -22,5 +25,4 @@ Future<void> init() async {
    * │ remote data sources
    * └──────────────────────────────────────────────────────────────────────────
    */
-
 }
