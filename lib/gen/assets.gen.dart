@@ -23,9 +23,16 @@ class $AssetsAnimGen {
   /// File path: assets/anim/anim_loading_qr.json
   String get animLoadingQr => 'assets/anim/anim_loading_qr.json';
 
+  /// File path: assets/anim/anim_splash.json
+  String get animSplash => 'assets/anim/anim_splash.json';
+
   /// List of all assets
-  List<String> get values =>
-      [animConnectPageNotFound, animDinosaurPageNotFound, animLoadingQr];
+  List<String> get values => [
+        animConnectPageNotFound,
+        animDinosaurPageNotFound,
+        animLoadingQr,
+        animSplash
+      ];
 }
 
 class $AssetsI18nGen {
@@ -44,17 +51,17 @@ class $AssetsI18nGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/bell.svg
-  String get bell => 'assets/icons/bell.svg';
-
-  /// File path: assets/icons/flash.svg
-  String get flash => 'assets/icons/flash.svg';
-
-  /// File path: assets/icons/icon_change_cam.svg
-  String get iconChangeCam => 'assets/icons/icon_change_cam.svg';
+  /// File path: assets/icons/icon_history.svg
+  String get iconHistory => 'assets/icons/icon_history.svg';
 
   /// File path: assets/icons/icon_link.svg
   String get iconLink => 'assets/icons/icon_link.svg';
+
+  /// File path: assets/icons/icon_qrcode.svg
+  String get iconQrcode => 'assets/icons/icon_qrcode.svg';
+
+  /// File path: assets/icons/icon_scan.svg
+  String get iconScan => 'assets/icons/icon_scan.svg';
 
   /// File path: assets/icons/icon_text.svg
   String get iconText => 'assets/icons/icon_text.svg';
@@ -62,27 +69,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_wifi.svg
   String get iconWifi => 'assets/icons/icon_wifi.svg';
 
-  /// File path: assets/icons/img.svg
-  String get img => 'assets/icons/img.svg';
-
-  /// File path: assets/icons/menu.svg
-  String get menu => 'assets/icons/menu.svg';
-
-  /// File path: assets/icons/share.svg
-  String get share => 'assets/icons/share.svg';
-
   /// List of all assets
-  List<String> get values => [
-        bell,
-        flash,
-        iconChangeCam,
-        iconLink,
-        iconText,
-        iconWifi,
-        img,
-        menu,
-        share
-      ];
+  List<String> get values =>
+      [iconHistory, iconLink, iconQrcode, iconScan, iconText, iconWifi];
 }
 
 class $AssetsImagesGen {
