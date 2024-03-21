@@ -105,6 +105,8 @@ class AppColor {
   static const Color boxShadow = Color(0xffDDDDDD);
   static const Color pinkPrimary = Color(0xffF47F88);
   static const Color grey = Color(0xff333333);
+  static const Color lightGrey = Color(0xffA4A4A4);
+
   static const Color naviBlue = Color(0xff2D3047);
   static const Color whiteLight = Color(0xffd9d9d9);
   static const Color whiteLight2 = Color(0xffE2E2E2);
