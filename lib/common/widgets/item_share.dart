@@ -4,8 +4,13 @@ import 'package:qr_code_scanner/core/app_color.dart';
 import 'package:qr_code_scanner/core/app_text_style.dart';
 
 class ItemSupport extends StatelessWidget {
-  const ItemSupport(
-      {super.key, required this.title, required this.description, required this.iconSrc, required this.onTap});
+  const ItemSupport({
+    super.key,
+    required this.title,
+    required this.description,
+    required this.iconSrc,
+    required this.onTap,
+  });
 
   final String title, description, iconSrc;
   final Function onTap;

@@ -13,9 +13,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) => SafeArea(
         child: Container(
-          height: kToolbarHeight, // Customize the height of the app bar
-          color: AppColor.grey, // Customize the background color of the app bar
-          alignment: Alignment.center, // Align the title in the center
+          height: kToolbarHeight,
+          color: AppColor.grey,
+          alignment: Alignment.center,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,8 +24,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 padding: const EdgeInsets.only(left: 46),
                 child: Text(
                   title,
-                  style:
-                      AppTextStyle.title1.copyWith(color: AppColor.blackD9, fontSize: 27, fontWeight: FontWeight.w400),
+                  style: AppTextStyle.title1.copyWith(
+                    color: AppColor.blackD9,
+                    fontSize: 27,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
               ),
               const Spacer(),
@@ -53,10 +56,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
             ],
-          ), // Display the title widget
+          ),
         ),
       );
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight); // Adjust the preferred size of the app bar
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
