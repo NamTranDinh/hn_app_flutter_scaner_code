@@ -20,6 +20,7 @@ class NavItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Expanded(
         child: InkWell(
+          borderRadius: BorderRadius.circular(10),
           onTap: onTap,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -19,26 +19,25 @@ class NavBar extends StatelessWidget {
   const NavBar({super.key});
 
   @override
-  Widget build(BuildContext context) => Container(
-        margin: EdgeInsets.only(left: 16, right: 16, bottom: Platform.isAndroid ? 16 : 0),
-        child: BottomAppBar(
-          color: Colors.transparent,
-          elevation: 0,
-          child: Container(
-            height: 60,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: AppColor.grey,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
-                  spreadRadius: 5,
-                  blurRadius: 13,
-                  offset: const Offset(0, 3),
-                ),
-              ],
-            ),
+  Widget build(BuildContext context) => SafeArea(
+        child: Container(
+          height: 60,
+          decoration: BoxDecoration(
+            color: AppColor.grey,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.3),
+                spreadRadius: 5,
+                blurRadius: 13,
+                offset: const Offset(0, 3),
+              ),
+            ],
+          ),
+          margin: EdgeInsets.only(left: 16, right: 16, bottom: Platform.isAndroid ? 16 : 0),
+          child: BottomAppBar(
+            color: Colors.transparent,
+            elevation: 0,
             child: Row(
               children: [
                 BlocBuilder<NavbarCubit, ItemNavBar>(
@@ -50,7 +49,7 @@ class NavBar extends StatelessWidget {
                     title: 'home_page.nav_bar.generate'.tr(),
                   ),
                 ),
-                const SizedBox(width: 60),
+                const SizedBox(width: 70),
                 BlocBuilder<NavbarCubit, ItemNavBar>(
                   buildWhen: (previous, current) => previous.name != current.name,
                   builder: (context, state) => NavItem(
