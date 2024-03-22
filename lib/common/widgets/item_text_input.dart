@@ -24,11 +24,13 @@ class ItemTextInput extends StatefulWidget {
     required this.hint,
     this.action,
     this.keyboard,
+    this.validate,
   });
 
   final TextInputAction? action;
   final TextInputType? keyboard;
   final String label, hint;
+  final String? Function(String?)? validate;
   final TextEditingController controller;
 
   @override
@@ -86,6 +88,7 @@ class _ItemTextInputState extends State<ItemTextInput> {
                 textAlign: TextAlign.start,
                 textInputAction: widget.action ?? TextInputAction.done,
                 keyboardType: widget.keyboard ?? TextInputType.text,
+                validator: widget.validate,
               ),
             ),
           ],
