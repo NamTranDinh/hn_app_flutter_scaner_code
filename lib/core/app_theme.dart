@@ -12,7 +12,7 @@ class AppTheme {
     highlightColor: AppColor.primaryYellow[10],
     indicatorColor: AppColor.primaryYellow,
     scaffoldBackgroundColor: Colors.white,
-    appBarTheme: const AppBarTheme(color: AppColor.grey, centerTitle: true),
+    appBarTheme: AppBarTheme(color: AppColor.grey.withAlpha((255 * 0.82).toInt()), centerTitle: true),
     dialogTheme: const DialogTheme(
       backgroundColor: AppColor.white,
       alignment: Alignment.center,

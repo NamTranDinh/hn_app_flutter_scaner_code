@@ -57,17 +57,38 @@ class $AssetsIconsGen {
   /// File path: assets/icons/flash.svg
   String get flash => 'assets/icons/flash.svg';
 
+  /// File path: assets/icons/icon_back.svg
+  String get iconBack => 'assets/icons/icon_back.svg';
+
+  /// File path: assets/icons/icon_background.svg
+  String get iconBackground => 'assets/icons/icon_background.svg';
+
+  /// File path: assets/icons/icon_bird.svg
+  String get iconBird => 'assets/icons/icon_bird.svg';
+
   /// File path: assets/icons/icon_change_cam.svg
   String get iconChangeCam => 'assets/icons/icon_change_cam.svg';
 
   /// File path: assets/icons/icon_delete.svg
   String get iconDelete => 'assets/icons/icon_delete.svg';
 
+  /// File path: assets/icons/icon_email.svg
+  String get iconEmail => 'assets/icons/icon_email.svg';
+
   /// File path: assets/icons/icon_history.svg
   String get iconHistory => 'assets/icons/icon_history.svg';
 
+  /// File path: assets/icons/icon_insta.svg
+  String get iconInsta => 'assets/icons/icon_insta.svg';
+
   /// File path: assets/icons/icon_link.svg
   String get iconLink => 'assets/icons/icon_link.svg';
+
+  /// File path: assets/icons/icon_phone.svg
+  String get iconPhone => 'assets/icons/icon_phone.svg';
+
+  /// File path: assets/icons/icon_phone_number.svg
+  String get iconPhoneNumber => 'assets/icons/icon_phone_number.svg';
 
   /// File path: assets/icons/icon_qrcode.svg
   String get iconQrcode => 'assets/icons/icon_qrcode.svg';
@@ -77,6 +98,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/icon_text.svg
   String get iconText => 'assets/icons/icon_text.svg';
+
+  /// File path: assets/icons/icon_web.svg
+  String get iconWeb => 'assets/icons/icon_web.svg';
 
   /// File path: assets/icons/icon_wifi.svg
   String get iconWifi => 'assets/icons/icon_wifi.svg';
@@ -94,13 +118,21 @@ class $AssetsIconsGen {
   List<String> get values => [
         bell,
         flash,
+        iconBack,
+        iconBackground,
+        iconBird,
         iconChangeCam,
         iconDelete,
+        iconEmail,
         iconHistory,
+        iconInsta,
         iconLink,
+        iconPhone,
+        iconPhoneNumber,
         iconQrcode,
         iconScan,
         iconText,
+        iconWeb,
         iconWifi,
         img,
         menu,
