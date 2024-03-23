@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qr_code_scanner/blocs/genarate/generate_page_cubit.dart';
-import 'package:qr_code_scanner/common/widgets/result_appbar.dart';
 import 'package:qr_code_scanner/common/widgets/wifi_form_input.dart';
+import 'package:qr_code_scanner/core/app_color.dart';
 import 'package:qr_code_scanner/gen/assets.gen.dart';
 
 class GenerateWifiInputPage extends StatefulWidget {
   const GenerateWifiInputPage({
     super.key,
     required this.appBarLabel,
-    required this.inputLabel,
-    required this.inputHint,
     required this.onClick,
     required this.iconPath,
   });
-  final String appBarLabel, inputLabel, inputHint, iconPath;
+  final String appBarLabel, iconPath;
   final Function(String name, String password) onClick;
 
   @override
@@ -24,10 +20,6 @@ class GenerateWifiInputPage extends StatefulWidget {
 
 class _GenerateWifiInputPageState extends State<GenerateWifiInputPage> {
   _GenerateWifiInputPageState();
-
-  void back() {
-    context.read<GeneratePageCubit>().go(ItemGeneratePage.root);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,25 +31,17 @@ class _GenerateWifiInputPageState extends State<GenerateWifiInputPage> {
           top: 0,
           width: size.width,
           height: size.height,
-          child: SvgPicture.asset(
-            Assets.icons.iconBackground,
-            fit: BoxFit.fill,
-          ),
-        ),
-        Positioned(
-          top: 0,
-          left: 0,
-          height: 80,
-          width: size.width,
-          child: ResultAppBar(
-            title: widget.appBarLabel,
-            action: back,
-            icon: Assets.icons.iconBack,
+          child: Container(
+            color: AppColor.grey,
+            child: SvgPicture.asset(
+              Assets.icons.iconBackground,
+              fit: BoxFit.fill,
+            ),
           ),
         ),
         Positioned(
           width: 335,
-          height: 336,
+          height: 420,
           child: WifiInputForm(
             iconPath: widget.iconPath,
             validate: (v) => null,

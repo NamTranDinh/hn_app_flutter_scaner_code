@@ -5,9 +5,22 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:get/get_navigation/src/routes/route_middleware.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:qr_code_scanner/di.dart';
+import 'package:qr_code_scanner/pages/general_code/generate_business.dart';
+import 'package:qr_code_scanner/pages/general_code/generate_contact.dart';
+import 'package:qr_code_scanner/pages/general_code/generate_email.dart';
+import 'package:qr_code_scanner/pages/general_code/generate_event.dart';
+import 'package:qr_code_scanner/pages/general_code/generate_intagram.dart';
+import 'package:qr_code_scanner/pages/general_code/generate_location.dart';
+import 'package:qr_code_scanner/pages/general_code/generate_phone.dart';
+import 'package:qr_code_scanner/pages/general_code/generate_text.dart';
+import 'package:qr_code_scanner/pages/general_code/generate_web.dart';
+import 'package:qr_code_scanner/pages/general_code/generate_whatsapp.dart';
+import 'package:qr_code_scanner/pages/general_code/generate_wifi.dart';
 import 'package:qr_code_scanner/pages/home/my_home_page.dart';
 import 'package:qr_code_scanner/pages/splash/splash_page.dart';
 import 'package:qr_code_scanner/routes/routes.dart';
+
+import '../pages/general_code/generate_twitter.dart';
 
 final getPage = getIt.get<AppRouter>();
 
@@ -20,6 +33,54 @@ class AppRouter {
         _getPage(
           name: Routes.homeNamedPage,
           page: () => const MyHomePage(),
+        ),
+        _getPage(
+          name: Routes.generateQrText,
+          page: () => const GenerateText(),
+        ),
+        _getPage(
+          name: Routes.generateQrEmail,
+          page: () => const GenerateEmail(),
+        ),
+        _getPage(
+          name: Routes.generateQrWifi,
+          page: () => const GenerateWifi(),
+        ),
+        _getPage(
+          name: Routes.generateQrInstagram,
+          page: () => const GenerateInstagram(),
+        ),
+        _getPage(
+          name: Routes.generateQrWhatsApp,
+          page: () => const GenerateWhatsApp(),
+        ),
+        _getPage(
+          name: Routes.generateQrWeb,
+          page: () => const GenerateWeb(),
+        ),
+        _getPage(
+          name: Routes.generateQrPhone,
+          page: () => const GeneratePhone(),
+        ),
+        _getPage(
+          name: Routes.generateQrEvent,
+          page: () => const GenerateEvent(),
+        ),
+        _getPage(
+          name: Routes.generateQrTwitter,
+          page: () => const GenerateTwitter(),
+        ),
+        _getPage(
+          name: Routes.generateQrContact,
+          page: () => const GenerateContact(),
+        ),
+        _getPage(
+          name: Routes.generateQrBusiness,
+          page: () => const GenerateBusiness(),
+        ),
+        _getPage(
+          name: Routes.generateQrLocation,
+          page: () => const GenerateLocation(),
         ),
       ];
 

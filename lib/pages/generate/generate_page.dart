@@ -1,47 +1,17 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:qr_code_scanner/blocs/genarate/generate_page_cubit.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:qr_code_scanner/common/widgets/appbar.dart';
 import 'package:qr_code_scanner/common/widgets/item_qr.dart';
-import 'package:qr_code_scanner/di.dart';
 import 'package:qr_code_scanner/gen/assets.gen.dart';
-import 'package:qr_code_scanner/pages/generate_text/generate_text.dart';
+import 'package:qr_code_scanner/routes/routes.dart';
 
 class GeneratePage extends StatelessWidget {
   const GeneratePage({super.key});
-  void backToHome(BuildContext context) => context.read<GeneratePageCubit>().go(ItemGeneratePage.root);
+
   @override
-  Widget build(BuildContext context) => BlocProvider(
-        create: (ctx) => getIt<GeneratePageCubit>(),
-        child: BlocBuilder<GeneratePageCubit, ItemGeneratePage>(
-          buildWhen: (oldState, newState) => oldState.name != newState.name,
-          builder: (BuildContext context, ItemGeneratePage state) {
-            switch (state) {
-              case ItemGeneratePage.root:
-                return _rootView(context);
-              case ItemGeneratePage.text:
-                return GenerateSingleInputPage(
-                  iconPath: Assets.icons.iconText,
-                  appBarLabel: 'generate.text'.tr(),
-                  inputLabel: 'generate.text'.tr(),
-                  inputHint: 'generate.text_hint'.tr(),
-                  onClick: (data) {},
-                );
-              case ItemGeneratePage.email:
-                return GenerateSingleInputPage(
-                  iconPath: Assets.icons.iconEmail,
-                  appBarLabel: 'generate.email'.tr(),
-                  inputLabel: 'generate.email'.tr(),
-                  inputHint: 'generate.email_hint'.tr(),
-                  onClick: (data) {},
-                );
-              default:
-                return Container();
-            }
-          },
-        ),
-      );
+  Widget build(BuildContext context) => _rootView(context);
 
   Widget _rootView(BuildContext context) => Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -49,29 +19,103 @@ class GeneratePage extends StatelessWidget {
           CustomAppBar(title: 'generate.appbar_title'.tr(), action: () {}),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(left: 21, right: 21),
+              padding: const EdgeInsets.only(left: 21, right: 21, top: 21),
               child: GridView(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-                padding: EdgeInsets.only(left: 21, right: 21),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  mainAxisSpacing: 36,
+                  crossAxisSpacing: 20,
+                ),
+                padding: const EdgeInsets.only(left: 21, right: 21),
                 children: [
                   ItemQr(
                     iconSrc: Assets.icons.iconText,
                     textValue: 'generate.text'.tr(),
                     onTap: () {
-                      context.read<GeneratePageCubit>().go(ItemGeneratePage.text);
+                      Get.toNamed(Routes.generateQrText);
                     },
                   ),
                   ItemQr(
                     iconSrc: Assets.icons.iconEmail,
                     textValue: 'generate.email'.tr(),
                     onTap: () {
-                      context.read<GeneratePageCubit>().go(ItemGeneratePage.email);
+                      Get.toNamed(Routes.generateQrEmail);
+                    },
+                  ),
+                  ItemQr(
+                    iconSrc: Assets.icons.iconWifi,
+                    textValue: 'generate.wifi'.tr(),
+                    onTap: () {
+                      Get.toNamed(Routes.generateQrWifi);
+                    },
+                  ),
+                  ItemQr(
+                    iconSrc: Assets.icons.iconInsta,
+                    textValue: 'generate.instagram'.tr(),
+                    onTap: () {
+                      Get.toNamed(Routes.generateQrInstagram);
+                    },
+                  ),
+                  ItemQr(
+                    iconSrc: Assets.icons.iconPhone,
+                    textValue: 'generate.whatsapp'.tr(),
+                    onTap: () {
+                      Get.toNamed(Routes.generateQrWhatsApp);
+                    },
+                  ),
+                  ItemQr(
+                    iconSrc: Assets.icons.iconEvent,
+                    textValue: 'generate.event'.tr(),
+                    onTap: () {
+                      Get.toNamed(Routes.generateQrEvent);
+                    },
+                  ),
+                  ItemQr(
+                    iconSrc: Assets.icons.iconContact,
+                    textValue: 'generate.contact'.tr(),
+                    onTap: () {
+                      Get.toNamed(Routes.generateQrContact);
+                    },
+                  ),
+                  ItemQr(
+                    iconSrc: Assets.icons.itemBusiness,
+                    textValue: 'generate.business'.tr(),
+                    onTap: () {
+                      Get.toNamed(Routes.generateQrBusiness);
+                    },
+                  ),
+                  ItemQr(
+                    iconSrc: Assets.icons.itemLocation,
+                    textValue: 'generate.location'.tr(),
+                    onTap: () {
+                      Get.toNamed(Routes.generateQrLocation);
+                    },
+                  ),
+                  ItemQr(
+                    iconSrc: Assets.icons.iconPhoneNumber,
+                    textValue: 'generate.phone'.tr(),
+                    onTap: () {
+                      Get.toNamed(Routes.generateQrPhone);
+                    },
+                  ),
+                  ItemQr(
+                    iconSrc: Assets.icons.iconBird,
+                    textValue: 'generate.twitter'.tr(),
+                    onTap: () {
+                      Get.toNamed(Routes.generateQrTwitter);
+                    },
+                  ),
+                  ItemQr(
+                    iconSrc: Assets.icons.iconWeb,
+                    textValue: 'generate.website'.tr(),
+                    onTap: () {
+                      Get.toNamed(Routes.generateQrWeb);
                     },
                   ),
                 ],
               ),
             ),
-          )
+          ),
         ],
       );
 }

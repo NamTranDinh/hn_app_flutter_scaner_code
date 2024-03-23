@@ -33,6 +33,7 @@ class _WifiInputFormState extends State<WifiInputForm> {
   @override
   Widget build(BuildContext context) => DecoratedBox(
         decoration: BoxDecoration(
+          color: AppColor.grey,
           borderRadius: BorderRadius.circular(6),
           border: const Border(
             top: BorderSide(

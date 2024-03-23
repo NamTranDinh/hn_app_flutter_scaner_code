@@ -69,11 +69,17 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_change_cam.svg
   String get iconChangeCam => 'assets/icons/icon_change_cam.svg';
 
+  /// File path: assets/icons/icon_contact.svg
+  String get iconContact => 'assets/icons/icon_contact.svg';
+
   /// File path: assets/icons/icon_delete.svg
   String get iconDelete => 'assets/icons/icon_delete.svg';
 
   /// File path: assets/icons/icon_email.svg
   String get iconEmail => 'assets/icons/icon_email.svg';
+
+  /// File path: assets/icons/icon_event.svg
+  String get iconEvent => 'assets/icons/icon_event.svg';
 
   /// File path: assets/icons/icon_history.svg
   String get iconHistory => 'assets/icons/icon_history.svg';
@@ -108,6 +114,12 @@ class $AssetsIconsGen {
   /// File path: assets/icons/img.svg
   String get img => 'assets/icons/img.svg';
 
+  /// File path: assets/icons/item_business.svg
+  String get itemBusiness => 'assets/icons/item_business.svg';
+
+  /// File path: assets/icons/item_location.svg
+  String get itemLocation => 'assets/icons/item_location.svg';
+
   /// File path: assets/icons/menu.svg
   String get menu => 'assets/icons/menu.svg';
 
@@ -122,8 +134,10 @@ class $AssetsIconsGen {
         iconBackground,
         iconBird,
         iconChangeCam,
+        iconContact,
         iconDelete,
         iconEmail,
+        iconEvent,
         iconHistory,
         iconInsta,
         iconLink,
@@ -135,6 +149,8 @@ class $AssetsIconsGen {
         iconWeb,
         iconWifi,
         img,
+        itemBusiness,
+        itemLocation,
         menu,
         share
       ];

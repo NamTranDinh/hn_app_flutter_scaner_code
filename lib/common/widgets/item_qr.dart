@@ -18,7 +18,7 @@ class ItemQr extends StatelessWidget {
           width: width,
           height: height,
           child: Stack(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.bottomCenter,
             children: [
               Positioned(
                 top: 10,
@@ -32,22 +32,32 @@ class ItemQr extends StatelessWidget {
                       BoxShadow(color: AppColor.pureBlack.withAlpha(153), blurRadius: 12),
                     ],
                   ),
-                  child: SvgPicture.asset(
-                    iconSrc,
+                  child: SizedBox(
                     width: 40,
-                    height: 29,
-                    fit: BoxFit.scaleDown,
+                    height: 40,
+                    child: SvgPicture.asset(
+                      iconSrc,
+                      width: 40,
+                      height: 40,
+                      fit: BoxFit.scaleDown,
+                      colorFilter: const ColorFilter.mode(AppColor.grey, BlendMode.color),
+                    ),
                   ),
                 ),
               ),
-              Container(
-                width: 57,
-                height: 22,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(color: AppColor.whiteLight, borderRadius: BorderRadius.circular(4)),
-                child: Text(
-                  textValue,
-                  style: const TextStyle(color: AppColor.naviBlue, fontSize: 12),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Container(
+                  height: 22,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(color: AppColor.whiteLight, borderRadius: BorderRadius.circular(4)),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                    child: Text(
+                      textValue,
+                      style: const TextStyle(color: AppColor.naviBlue, fontSize: 12),
+                    ),
+                  ),
                 ),
               ),
             ],

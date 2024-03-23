@@ -28,10 +28,18 @@
     "business": "Business",
     "location": "Location",
     "whatsapp": "WhatsApp",
+    "whatsapp_label": "WhatsApp user",
+    "whatsapp_hint": "Enter number",
     "email": "Email",
     "email_hint":"Enter your email",
     "twitter": "Twitter",
+    "twitter_label": "Twitter username",
+    "twitter_hint": "Enter twitter username",
     "instagram": "Instagram",
-    "phone": "Phone"
+    "instagram_label": "Instagram user",
+    "instagram_hint": "Instagram user",
+    "phone": "Phone",
+    "phone_hint": "+90xxxxxxx",
+    "phone_label": "Phone number"
   }
 }

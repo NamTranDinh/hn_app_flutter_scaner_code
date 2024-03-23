@@ -14,7 +14,7 @@ class ResultAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) => SafeArea(
         child: Container(
           height: kToolbarHeight,
-          color: color ?? AppColor.transparent,
+          color: color ?? AppColor.grey,
           alignment: Alignment.center,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -23,7 +23,7 @@ class ResultAppBar extends StatelessWidget implements PreferredSizeWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 29.0),
                 child: GestureDetector(
-                  onTap: () => action,
+                  onTap: () => action(),
                   child: Container(
                     width: 40,
                     height: 40,
