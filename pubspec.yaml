@@ -1,4 +1,4 @@
-name: qr_code_scanner
+name: master_scanner_app
 description: QR Code Scanner.
 
 publish_to: 'none'
@@ -14,6 +14,9 @@ dependencies:
 
   base_core:
     path: packages/base_core
+
+  mp_qr_code_scan_runtime:
+    path: packages/mp_qr_code_runtime
 
   dio: ^5.4.0
   get_it: ^7.6.7
@@ -37,7 +40,6 @@ dependencies:
   lottie: ^3.1.0
   flutter_screenutil: ^5.9.0
   path: ^1.8.3
-  flutter_native_splash: ^2.3.11
 
 dev_dependencies:
   flutter_test:

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/core/app_text_style.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/core/app_text_style.dart';
+import 'package:master_scanner_app/gen/assets.gen.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key, required this.title, required this.action});
+
   final String title;
 
   final Function action;

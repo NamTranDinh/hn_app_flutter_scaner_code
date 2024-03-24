@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/gen/assets.gen.dart';
 
 class ItemScanInput extends StatelessWidget {
   const ItemScanInput({super.key, required this.choseImage, required this.flash, required this.changeCamera});

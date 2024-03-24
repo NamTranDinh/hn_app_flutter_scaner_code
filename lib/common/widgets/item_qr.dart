@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
+import 'package:master_scanner_app/core/app_color.dart';
 
 class ItemQr extends StatelessWidget {
   const ItemQr({super.key, required this.iconSrc, required this.textValue, required this.onTap});

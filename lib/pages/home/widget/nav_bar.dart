@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:qr_code_scanner/blocs/navbar/navbar_cubit.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
-import 'package:qr_code_scanner/pages/home/widget/nav_item.dart';
+import 'package:master_scanner_app/blocs/navbar/navbar_cubit.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/gen/assets.gen.dart';
+import 'package:master_scanner_app/pages/home/widget/nav_item.dart';
 
 class NavModel {
   NavModel({required this.page, required this.navKey});

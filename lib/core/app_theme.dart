@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/gen/fonts.gen.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/gen/fonts.gen.dart';
 
 class AppTheme {
   AppTheme._();
