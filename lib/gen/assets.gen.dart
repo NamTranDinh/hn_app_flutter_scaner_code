@@ -102,6 +102,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_scan.svg
   String get iconScan => 'assets/icons/icon_scan.svg';
 
+  /// File path: assets/icons/icon_scan_frame.svg
+  String get iconScanFrame => 'assets/icons/icon_scan_frame.svg';
+
   /// File path: assets/icons/icon_text.svg
   String get iconText => 'assets/icons/icon_text.svg';
 
@@ -122,6 +125,12 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/menu.svg
   String get menu => 'assets/icons/menu.svg';
+
+  /// File path: assets/icons/minus.svg
+  String get minus => 'assets/icons/minus.svg';
+
+  /// File path: assets/icons/plus.svg
+  String get plus => 'assets/icons/plus.svg';
 
   /// File path: assets/icons/share.svg
   String get share => 'assets/icons/share.svg';
@@ -145,6 +154,7 @@ class $AssetsIconsGen {
         iconPhoneNumber,
         iconQrcode,
         iconScan,
+        iconScanFrame,
         iconText,
         iconWeb,
         iconWifi,
@@ -152,6 +162,8 @@ class $AssetsIconsGen {
         itemBusiness,
         itemLocation,
         menu,
+        minus,
+        plus,
         share
       ];
 }

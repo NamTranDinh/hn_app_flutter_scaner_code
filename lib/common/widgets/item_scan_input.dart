@@ -14,7 +14,7 @@ class ItemScanInput extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColor.grey,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [BoxShadow(color: AppColor.grey.withAlpha(79 * 255 ~/ 100), blurRadius: 20)],
+          boxShadow: [BoxShadow(color: AppColor.pureBlack.withAlpha(79 * 255 ~/ 100), blurRadius: 20)],
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 26),
