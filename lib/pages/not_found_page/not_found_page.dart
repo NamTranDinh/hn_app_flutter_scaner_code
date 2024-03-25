@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:qr_code_scanner/core/app_extension.dart';
-import 'package:qr_code_scanner/core/app_text_style.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
+import 'package:master_scanner_app/core/app_extension.dart';
+import 'package:master_scanner_app/core/app_text_style.dart';
+import 'package:master_scanner_app/gen/assets.gen.dart';
 
 class NotFoundPage extends StatelessWidget {
   const NotFoundPage({super.key});

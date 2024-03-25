@@ -4,10 +4,11 @@ import 'package:get/get_navigation/src/routes/custom_transition.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:get/get_navigation/src/routes/route_middleware.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
-import 'package:qr_code_scanner/di.dart';
-import 'package:qr_code_scanner/pages/home/my_home_page.dart';
-import 'package:qr_code_scanner/pages/splash/splash_page.dart';
-import 'package:qr_code_scanner/routes/routes.dart';
+import 'package:master_scanner_app/di.dart';
+import 'package:master_scanner_app/pages/home/my_home_page.dart';
+import 'package:master_scanner_app/pages/scanner/qr_code_scanner_page.dart';
+import 'package:master_scanner_app/pages/splash/splash_page.dart';
+import 'package:master_scanner_app/routes/routes.dart';
 
 final getPage = getIt.get<AppRouter>();
 
@@ -20,6 +21,10 @@ class AppRouter {
         _getPage(
           name: Routes.homeNamedPage,
           page: () => const MyHomePage(),
+        ),
+        _getPage(
+          name: Routes.qrCodeScannerPage,
+          page: () => const QrCodeScannerPage(),
         ),
       ];
 
@@ -54,7 +59,7 @@ class AppRouter {
         curve: curve ?? Curves.linear,
         alignment: alignment,
         transition: transition ?? Transition.rightToLeft,
-        transitionDuration: transitionDuration,
+        transitionDuration: transitionDuration ?? const Duration(milliseconds: 250),
         customTransition: customTransition,
         /** Additional attributes*/
       );

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
-
-import '../../core/app_text_style.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/core/app_text_style.dart';
+import 'package:master_scanner_app/gen/assets.gen.dart';
 
 class ItemResultDetail extends StatelessWidget {
   const ItemResultDetail({super.key, required this.type, required this.date, required this.data});
@@ -11,7 +10,7 @@ class ItemResultDetail extends StatelessWidget {
   final String type, date, data;
 
   @override
-  Widget build(BuildContext context) => Container(
+  Widget build(BuildContext context) => DecoratedBox(
         decoration: BoxDecoration(
           color: AppColor.lightGrey3,
           borderRadius: BorderRadius.circular(6),
@@ -67,11 +66,11 @@ class ItemResultDetail extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () {},
                   child: Text(
-                    "Show QR Code",
+                    'Show QR Code',
                     style: AppTextStyle.title3.copyWith(fontSize: 15, color: AppColor.primaryYellow),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

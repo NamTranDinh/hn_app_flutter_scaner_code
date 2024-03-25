@@ -54,8 +54,20 @@ class $AssetsIconsGen {
   /// File path: assets/icons/bell.svg
   String get bell => 'assets/icons/bell.svg';
 
+  /// File path: assets/icons/flash-slash.svg
+  String get flashSlash => 'assets/icons/flash-slash.svg';
+
   /// File path: assets/icons/flash.svg
   String get flash => 'assets/icons/flash.svg';
+
+  /// File path: assets/icons/ic_back.svg
+  String get icBack => 'assets/icons/ic_back.svg';
+
+  /// File path: assets/icons/icon_back.svg
+  String get iconBack => 'assets/icons/icon_back.svg';
+
+  /// File path: assets/icons/icon_bird.svg
+  String get iconBird => 'assets/icons/icon_bird.svg';
 
   /// File path: assets/icons/icon_change_cam.svg
   String get iconChangeCam => 'assets/icons/icon_change_cam.svg';
@@ -63,11 +75,23 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_delete.svg
   String get iconDelete => 'assets/icons/icon_delete.svg';
 
+  /// File path: assets/icons/icon_email.svg
+  String get iconEmail => 'assets/icons/icon_email.svg';
+
   /// File path: assets/icons/icon_history.svg
   String get iconHistory => 'assets/icons/icon_history.svg';
 
+  /// File path: assets/icons/icon_insta.svg
+  String get iconInsta => 'assets/icons/icon_insta.svg';
+
   /// File path: assets/icons/icon_link.svg
   String get iconLink => 'assets/icons/icon_link.svg';
+
+  /// File path: assets/icons/icon_phone.svg
+  String get iconPhone => 'assets/icons/icon_phone.svg';
+
+  /// File path: assets/icons/icon_phone_number.svg
+  String get iconPhoneNumber => 'assets/icons/icon_phone_number.svg';
 
   /// File path: assets/icons/icon_qrcode.svg
   String get iconQrcode => 'assets/icons/icon_qrcode.svg';
@@ -77,6 +101,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/icon_text.svg
   String get iconText => 'assets/icons/icon_text.svg';
+
+  /// File path: assets/icons/icon_web.svg
+  String get iconWeb => 'assets/icons/icon_web.svg';
 
   /// File path: assets/icons/icon_wifi.svg
   String get iconWifi => 'assets/icons/icon_wifi.svg';
@@ -93,14 +120,23 @@ class $AssetsIconsGen {
   /// List of all assets
   List<String> get values => [
         bell,
+        flashSlash,
         flash,
+        icBack,
+        iconBack,
+        iconBird,
         iconChangeCam,
         iconDelete,
+        iconEmail,
         iconHistory,
+        iconInsta,
         iconLink,
+        iconPhone,
+        iconPhoneNumber,
         iconQrcode,
         iconScan,
         iconText,
+        iconWeb,
         iconWifi,
         img,
         menu,
@@ -115,8 +151,12 @@ class $AssetsImagesGen {
   AssetGenImage get appIcon =>
       const AssetGenImage('assets/images/app_icon.png');
 
+  /// File path: assets/images/undraw_mobile_encryption.svg
+  String get undrawMobileEncryption =>
+      'assets/images/undraw_mobile_encryption.svg';
+
   /// List of all assets
-  List<AssetGenImage> get values => [appIcon];
+  List<dynamic> get values => [appIcon, undrawMobileEncryption];
 }
 
 class Assets {

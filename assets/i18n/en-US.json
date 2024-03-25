@@ -8,5 +8,18 @@
       "generate": "Generate",
       "history": "History"
     }
+  },
+  "qr_code_scanner_page": {
+    "title": "Move the camera to the QR code to scan",
+    "cancel_btn": "Bỏ qua",
+    "no_permission": "No camera permission"
+  },
+  "dialog": {
+    "request_permission": {
+      "open_setting": "Open setting",
+      "content": "We'll need your permission before accessing your camera!",
+      "camera": "Camera",
+      "not_now": "Not now"
+    }
   }
 }

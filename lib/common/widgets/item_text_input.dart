@@ -1,22 +1,8 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart'
-    show
-        BorderRadius,
-        BuildContext,
-        Column,
-        InputDecoration,
-        OutlineInputBorder,
-        SizedBox,
-        State,
-        StatefulWidget,
-        Text,
-        TextEditingController,
-        TextFormField,
-        Widget;
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/core/app_text_style.dart';
+import 'package:flutter/material.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/core/app_text_style.dart';
 
-class ItemTextInput extends StatefulWidget {
+class ItemTextInput extends StatelessWidget {
   const ItemTextInput({
     super.key,
     required this.label,
@@ -34,13 +20,6 @@ class ItemTextInput extends StatefulWidget {
   final TextEditingController controller;
 
   @override
-  _ItemTextInputState createState() => _ItemTextInputState();
-}
-
-class _ItemTextInputState extends State<ItemTextInput> {
-  _ItemTextInputState();
-
-  @override
   Widget build(BuildContext context) => SizedBox(
         height: 80,
         child: Column(
@@ -52,7 +31,7 @@ class _ItemTextInputState extends State<ItemTextInput> {
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(
-                  widget.label,
+                  label,
                   style: AppTextStyle.footNote2.copyWith(color: AppColor.whiteLight),
                 ),
               ),
@@ -61,9 +40,9 @@ class _ItemTextInputState extends State<ItemTextInput> {
               constraints: const BoxConstraints(maxHeight: 45),
               child: TextFormField(
                 textAlignVertical: TextAlignVertical.center,
-                controller: widget.controller,
+                controller: controller,
                 decoration: InputDecoration(
-                  hintText: widget.hint,
+                  hintText: hint,
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                     borderSide: BorderSide(color: AppColor.whiteLight.withAlpha((255 * 0.8).toInt())),
@@ -86,9 +65,9 @@ class _ItemTextInputState extends State<ItemTextInput> {
                 ),
                 style: AppTextStyle.caption2.copyWith(color: AppColor.whiteLight),
                 textAlign: TextAlign.start,
-                textInputAction: widget.action ?? TextInputAction.done,
-                keyboardType: widget.keyboard ?? TextInputType.text,
-                validator: widget.validate,
+                textInputAction: action ?? TextInputAction.done,
+                keyboardType: keyboard ?? TextInputType.text,
+                validator: validate,
               ),
             ),
           ],
