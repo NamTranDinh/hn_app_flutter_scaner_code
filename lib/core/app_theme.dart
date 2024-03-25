@@ -80,10 +80,7 @@ class AppTheme {
     //   borderRadius: BorderRadius.circular(8.0),
     // ),
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(
-        foregroundColor: Colors.black54,
-        shape: const RoundedRectangleBorder(side: BorderSide(color: Colors.grey)),
-      ),
+      style: TextButton.styleFrom(foregroundColor: Colors.black54),
     ),
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: Colors.white,

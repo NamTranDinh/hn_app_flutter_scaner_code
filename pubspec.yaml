@@ -15,14 +15,11 @@ dependencies:
   base_core:
     path: packages/base_core
 
-  mp_qr_code_scan_runtime:
-    path: packages/mp_qr_code_runtime
-
   dio: ^5.4.0
   get_it: ^7.6.7
   get: ^4.6.5
   chucker_flutter: ^1.6.3
-#  permission_handler: ^11.0.1
+  permission_handler: ^11.0.1
   flutter_lints: ^2.0.0
   flutter_flavorizr: ^2.2.1
 
@@ -39,7 +36,9 @@ dependencies:
   flutter_svg: ^2.0.10+1
   lottie: ^3.1.0
   flutter_screenutil: ^5.9.0
+  qr_code_scanner: ^1.0.1
   path: ^1.8.3
+  simple_ripple_animation: ^0.0.9
 
 dev_dependencies:
   flutter_test:

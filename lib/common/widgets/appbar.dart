@@ -9,7 +9,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   final String title;
 
-  final Function action;
+  final Function() action;
 
   @override
   Widget build(BuildContext context) => SafeArea(
@@ -36,7 +36,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 31.0),
                 child: GestureDetector(
-                  onTap: action(),
+                  onTap: action,
                   child: Container(
                     width: 40,
                     height: 40,
