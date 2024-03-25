@@ -5,7 +5,7 @@ import 'package:master_scanner_app/common/widgets/item_button.dart';
 import 'package:master_scanner_app/common/widgets/item_text_input.dart';
 import 'package:master_scanner_app/core/app_color.dart';
 
-class SingerInputForm extends StatefulWidget {
+class SingerInputForm extends StatelessWidget {
   const SingerInputForm({
     super.key,
     required this.iconPath,
@@ -15,20 +15,11 @@ class SingerInputForm extends StatefulWidget {
     required this.hint,
     required this.controller,
   });
+
   final String iconPath, label, hint;
   final String? Function(String?) validate;
   final Function(String) onClick;
   final TextEditingController controller;
-
-  @override
-  State<SingerInputForm> createState() => _SingerInputFormState();
-}
-
-class _SingerInputFormState extends State<SingerInputForm> {
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) => DecoratedBox(
@@ -36,14 +27,8 @@ class _SingerInputFormState extends State<SingerInputForm> {
           color: AppColor.grey,
           borderRadius: BorderRadius.circular(6),
           border: const Border(
-            top: BorderSide(
-              color: AppColor.primaryYellow,
-              width: 2.0,
-            ),
-            bottom: BorderSide(
-              color: AppColor.primaryYellow,
-              width: 2.0,
-            ),
+            top: BorderSide(color: AppColor.primaryYellow, width: 2.0),
+            bottom: BorderSide(color: AppColor.primaryYellow, width: 2.0),
           ),
           boxShadow: [BoxShadow(color: AppColor.pureBlack.withAlpha(125), blurRadius: 12)],
         ),
@@ -53,7 +38,7 @@ class _SingerInputFormState extends State<SingerInputForm> {
             mainAxisSize: MainAxisSize.min,
             children: [
               SvgPicture.asset(
-                widget.iconPath,
+                iconPath,
                 colorFilter: const ColorFilter.mode(AppColor.primaryYellow, BlendMode.srcIn),
                 width: 60,
                 height: 60,
@@ -62,16 +47,16 @@ class _SingerInputFormState extends State<SingerInputForm> {
               Padding(
                 padding: const EdgeInsets.only(top: 18, bottom: 48),
                 child: ItemTextInput(
-                  label: widget.label,
-                  controller: widget.controller,
-                  hint: widget.hint,
-                  validate: widget.validate,
+                  label: label,
+                  controller: controller,
+                  hint: hint,
+                  validate: validate,
                 ),
               ),
               ItemButton(
                 title: 'wifi_form.title'.tr(),
                 onTap: () {
-                  widget.onClick(widget.controller.text);
+                  onClick(controller.text);
                 },
               ),
             ],
