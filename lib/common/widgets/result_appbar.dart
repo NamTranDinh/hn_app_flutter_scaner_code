@@ -15,7 +15,7 @@ class ResultAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   final String title, icon;
 
-  final Function action;
+  final Function() action;
   final Color? color;
 
   @override
@@ -31,7 +31,7 @@ class ResultAppBar extends StatelessWidget implements PreferredSizeWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 29.0),
                 child: GestureDetector(
-                  onTap: () => action(),
+                  onTap: action,
                   child: Container(
                     width: 40,
                     height: 40,

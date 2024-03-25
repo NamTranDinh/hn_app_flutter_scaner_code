@@ -23,10 +23,9 @@ class GeneratePage extends StatelessWidget {
               child: GridView(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
-                  mainAxisSpacing: 36,
-                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 34,
+                  crossAxisSpacing: 21,
                 ),
-                padding: const EdgeInsets.only(left: 21, right: 21),
                 children: [
                   ItemQr(
                     iconSrc: Assets.icons.iconText,
