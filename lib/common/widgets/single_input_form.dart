@@ -5,8 +5,8 @@ import 'package:master_scanner_app/common/widgets/item_button.dart';
 import 'package:master_scanner_app/common/widgets/item_text_input.dart';
 import 'package:master_scanner_app/core/app_color.dart';
 
-class WifiInputForm extends StatefulWidget {
-  const WifiInputForm({
+class SingerInputForm extends StatefulWidget {
+  const SingerInputForm({
     super.key,
     required this.iconPath,
     required this.validate,
@@ -21,10 +21,10 @@ class WifiInputForm extends StatefulWidget {
   final TextEditingController controller;
 
   @override
-  State<WifiInputForm> createState() => _WifiInputFormState();
+  State<SingerInputForm> createState() => _SingerInputFormState();
 }
 
-class _WifiInputFormState extends State<WifiInputForm> {
+class _SingerInputFormState extends State<SingerInputForm> {
   @override
   void initState() {
     super.initState();
@@ -33,6 +33,7 @@ class _WifiInputFormState extends State<WifiInputForm> {
   @override
   Widget build(BuildContext context) => DecoratedBox(
         decoration: BoxDecoration(
+          color: AppColor.grey,
           borderRadius: BorderRadius.circular(6),
           border: const Border(
             top: BorderSide(
@@ -44,6 +45,7 @@ class _WifiInputFormState extends State<WifiInputForm> {
               width: 2.0,
             ),
           ),
+          boxShadow: [BoxShadow(color: AppColor.pureBlack.withAlpha(125), blurRadius: 12)],
         ),
         child: Padding(
           padding: const EdgeInsets.only(top: 37, bottom: 42, left: 24, right: 22),

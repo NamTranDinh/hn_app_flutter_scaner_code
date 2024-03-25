@@ -12,37 +12,56 @@ class ItemQr extends StatelessWidget {
   final Function() onTap;
 
   @override
-  Widget build(BuildContext context) => SizedBox(
-        width: width,
-        height: height,
-        child: Stack(
-          alignment: Alignment.topCenter,
-          children: [
-            Positioned(
-              top: 10,
-              width: 86,
-              height: 82,
-              child: DecoratedBox(
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: AppColor.grey),
-                child: SvgPicture.asset(
-                  iconSrc,
-                  width: 40,
-                  height: 29,
-                  fit: BoxFit.scaleDown,
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: onTap,
+        child: SizedBox(
+          width: width,
+          height: height,
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              Positioned(
+                top: 10,
+                width: 86,
+                height: 82,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: AppColor.grey,
+                    boxShadow: [
+                      BoxShadow(color: AppColor.pureBlack.withAlpha(153), blurRadius: 12),
+                    ],
+                  ),
+                  child: SizedBox(
+                    width: 40,
+                    height: 40,
+                    child: SvgPicture.asset(
+                      iconSrc,
+                      width: 40,
+                      height: 40,
+                      fit: BoxFit.scaleDown,
+                      colorFilter: const ColorFilter.mode(AppColor.grey, BlendMode.color),
+                    ),
+                  ),
                 ),
               ),
-            ),
-            Container(
-              width: 57,
-              height: 22,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(color: AppColor.whiteLight, borderRadius: BorderRadius.circular(4)),
-              child: Text(
-                textValue,
-                style: const TextStyle(color: AppColor.naviBlue, fontSize: 12),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Container(
+                  height: 22,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(color: AppColor.whiteLight, borderRadius: BorderRadius.circular(4)),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                    child: Text(
+                      textValue,
+                      style: const TextStyle(color: AppColor.naviBlue, fontSize: 12),
+                    ),
+                  ),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       );
 }

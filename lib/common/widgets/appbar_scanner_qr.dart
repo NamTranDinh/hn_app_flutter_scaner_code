@@ -23,7 +23,7 @@ class AppbarScannerQr extends StatelessWidget implements PreferredSizeWidget {
         decoration: BoxDecoration(
           color: AppColor.grey,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: isShowShadow ? [BoxShadow(color: AppColor.grey.withAlpha(79 * 255 ~/ 100), blurRadius: 20)] : null,
+          boxShadow: isShowShadow ? [BoxShadow(color: AppColor.pureBlack.withAlpha(79 * 255 ~/ 100), blurRadius: 20)] : null,
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 26),

@@ -5,17 +5,24 @@ import 'package:master_scanner_app/core/app_text_style.dart';
 import 'package:master_scanner_app/gen/assets.gen.dart';
 
 class ResultAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const ResultAppBar({super.key, required this.title, required this.action, required this.icon});
+  const ResultAppBar({
+    super.key,
+    required this.title,
+    required this.action,
+    required this.icon,
+    this.color,
+  });
 
   final String title, icon;
 
   final Function action;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) => SafeArea(
         child: Container(
           height: kToolbarHeight,
-          color: AppColor.grey,
+          color: color ?? AppColor.grey,
           alignment: Alignment.center,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -24,7 +31,7 @@ class ResultAppBar extends StatelessWidget implements PreferredSizeWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 29.0),
                 child: GestureDetector(
-                  onTap: action(),
+                  onTap: () => action(),
                   child: Container(
                     width: 40,
                     height: 40,

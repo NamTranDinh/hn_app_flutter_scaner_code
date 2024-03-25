@@ -11,12 +11,10 @@ class WifiInputForm extends StatefulWidget {
     required this.iconPath,
     required this.validate,
     required this.onClick,
-    required this.label,
-    required this.hint,
     required this.nameController,
     required this.passwordController,
   });
-  final String iconPath, label, hint;
+  final String iconPath;
   final String? Function(String?) validate;
   final Function(String email, String password) onClick;
   final TextEditingController nameController;
@@ -35,6 +33,7 @@ class _WifiInputFormState extends State<WifiInputForm> {
   @override
   Widget build(BuildContext context) => DecoratedBox(
         decoration: BoxDecoration(
+          color: AppColor.grey,
           borderRadius: BorderRadius.circular(6),
           border: const Border(
             top: BorderSide(

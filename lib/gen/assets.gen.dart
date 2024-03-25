@@ -66,17 +66,26 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_back.svg
   String get iconBack => 'assets/icons/icon_back.svg';
 
+  /// File path: assets/icons/icon_background.svg
+  String get iconBackground => 'assets/icons/icon_background.svg';
+
   /// File path: assets/icons/icon_bird.svg
   String get iconBird => 'assets/icons/icon_bird.svg';
 
   /// File path: assets/icons/icon_change_cam.svg
   String get iconChangeCam => 'assets/icons/icon_change_cam.svg';
 
+  /// File path: assets/icons/icon_contact.svg
+  String get iconContact => 'assets/icons/icon_contact.svg';
+
   /// File path: assets/icons/icon_delete.svg
   String get iconDelete => 'assets/icons/icon_delete.svg';
 
   /// File path: assets/icons/icon_email.svg
   String get iconEmail => 'assets/icons/icon_email.svg';
+
+  /// File path: assets/icons/icon_event.svg
+  String get iconEvent => 'assets/icons/icon_event.svg';
 
   /// File path: assets/icons/icon_history.svg
   String get iconHistory => 'assets/icons/icon_history.svg';
@@ -99,6 +108,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_scan.svg
   String get iconScan => 'assets/icons/icon_scan.svg';
 
+  /// File path: assets/icons/icon_scan_frame.svg
+  String get iconScanFrame => 'assets/icons/icon_scan_frame.svg';
+
   /// File path: assets/icons/icon_text.svg
   String get iconText => 'assets/icons/icon_text.svg';
 
@@ -111,8 +123,20 @@ class $AssetsIconsGen {
   /// File path: assets/icons/img.svg
   String get img => 'assets/icons/img.svg';
 
+  /// File path: assets/icons/item_business.svg
+  String get itemBusiness => 'assets/icons/item_business.svg';
+
+  /// File path: assets/icons/item_location.svg
+  String get itemLocation => 'assets/icons/item_location.svg';
+
   /// File path: assets/icons/menu.svg
   String get menu => 'assets/icons/menu.svg';
+
+  /// File path: assets/icons/minus.svg
+  String get minus => 'assets/icons/minus.svg';
+
+  /// File path: assets/icons/plus.svg
+  String get plus => 'assets/icons/plus.svg';
 
   /// File path: assets/icons/share.svg
   String get share => 'assets/icons/share.svg';
@@ -124,10 +148,13 @@ class $AssetsIconsGen {
         flash,
         icBack,
         iconBack,
+        iconBackground,
         iconBird,
         iconChangeCam,
+        iconContact,
         iconDelete,
         iconEmail,
+        iconEvent,
         iconHistory,
         iconInsta,
         iconLink,
@@ -135,11 +162,16 @@ class $AssetsIconsGen {
         iconPhoneNumber,
         iconQrcode,
         iconScan,
+        iconScanFrame,
         iconText,
         iconWeb,
         iconWifi,
         img,
+        itemBusiness,
+        itemLocation,
         menu,
+        minus,
+        plus,
         share
       ];
 }
