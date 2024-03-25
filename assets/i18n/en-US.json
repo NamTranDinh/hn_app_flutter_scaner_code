@@ -8,5 +8,10 @@
       "generate": "Generate",
       "history": "History"
     }
+  },
+  "history_page": {
+    "bar": "History",
+    "scan": "Scan",
+    "create": "Create"
   }
 }

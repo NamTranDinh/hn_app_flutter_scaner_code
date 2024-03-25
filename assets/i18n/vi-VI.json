@@ -4,9 +4,14 @@
     "description": "We can't seen to find the page you're looking for."
   },
   "home_page": {
-    "nav_bar": {
+    "home_page": {
       "generate": "Generate",
       "history": "History"
     }
+  },
+  "history_page": {
+    "bar": "History",
+    "scan": "Scan",
+    "create": "Create"
   }
 }
