@@ -5,8 +5,6 @@ import 'package:master_scanner_app/core/app_color.dart';
 class ItemQr extends StatelessWidget {
   const ItemQr({super.key, required this.iconSrc, required this.textValue, required this.onTap});
 
-  final double width = 86;
-  final double height = 92;
   final String iconSrc;
   final String textValue;
   final Function() onTap;
@@ -14,54 +12,47 @@ class ItemQr extends StatelessWidget {
   @override
   Widget build(BuildContext context) => GestureDetector(
         onTap: onTap,
-        child: SizedBox(
-          width: width,
-          height: height,
-          child: Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              Positioned(
-                top: 10,
-                width: 86,
-                height: 82,
-                child: DecoratedBox(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: AppColor.grey,
-                    boxShadow: [
-                      BoxShadow(color: AppColor.pureBlack.withAlpha(153), blurRadius: 12),
-                    ],
-                  ),
-                  child: SizedBox(
-                    width: 40,
-                    height: 40,
-                    child: SvgPicture.asset(
-                      iconSrc,
-                      width: 40,
-                      height: 40,
-                      fit: BoxFit.scaleDown,
-                      colorFilter: const ColorFilter.mode(AppColor.grey, BlendMode.color),
-                    ),
+        child: Stack(
+          fit: StackFit.passthrough,
+          clipBehavior: Clip.none,
+          alignment: Alignment.bottomCenter,
+          children: [
+            Align(
+              alignment: Alignment.center,
+              child: Container(
+                width: 89,
+                height: 89,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: AppColor.grey,
+                  boxShadow: [
+                    BoxShadow(color: AppColor.pureBlack.withAlpha(144), blurRadius: 12),
+                  ],
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    iconSrc,
+                    width: 34,
+                    fit: BoxFit.contain,
+                    colorFilter: const ColorFilter.mode(AppColor.grey, BlendMode.color),
                   ),
                 ),
               ),
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Container(
-                  height: 22,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(color: AppColor.whiteLight, borderRadius: BorderRadius.circular(4)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                    child: Text(
-                      textValue,
-                      style: const TextStyle(color: AppColor.naviBlue, fontSize: 12),
-                    ),
-                  ),
+            ),
+            Positioned(
+              bottom: -8,
+              child: Container(
+                height: 21,
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(color: AppColor.whiteLight, borderRadius: BorderRadius.circular(4)),
+                child: Text(
+                  textValue,
+                  style: const TextStyle(color: AppColor.naviBlue, fontSize: 12),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
 }
