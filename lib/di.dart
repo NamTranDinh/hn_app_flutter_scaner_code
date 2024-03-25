@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
-import 'package:qr_code_scanner/blocs/navbar/navbar_cubit.dart';
-import 'package:qr_code_scanner/blocs/splash/splash_cubit.dart';
+import 'package:master_scanner_app/blocs/navbar/navbar_cubit.dart';
+import 'package:master_scanner_app/blocs/splash/splash_cubit.dart';
 
 final getIt = GetIt.instance;
 

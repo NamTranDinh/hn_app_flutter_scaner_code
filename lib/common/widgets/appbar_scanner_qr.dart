@@ -1,20 +1,29 @@
+import 'package:base_core/base_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/gen/assets.gen.dart';
 
-class ItemScanInput extends StatelessWidget {
-  const ItemScanInput({super.key, required this.choseImage, required this.flash, required this.changeCamera});
+class AppbarScannerQr extends StatelessWidget implements PreferredSizeWidget {
+  const AppbarScannerQr({
+    super.key,
+    required this.onTapImage,
+    required this.onTapFlash,
+    required this.onChangeCamera,
+    required this.isFlashOff,
+    this.isShowShadow = true,
+  });
 
-  final Function choseImage, flash, changeCamera;
+  final Function() onTapImage, onTapFlash, onChangeCamera;
+  final bool isFlashOff, isShowShadow;
 
   @override
   Widget build(BuildContext context) => Container(
-        constraints: const BoxConstraints(maxHeight: 45, maxWidth: 336),
+        width: context.widthDevice * .8,
         decoration: BoxDecoration(
           color: AppColor.grey,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [BoxShadow(color: AppColor.pureBlack.withAlpha(79 * 255 ~/ 100), blurRadius: 20)],
+          boxShadow: isShowShadow ? [BoxShadow(color: AppColor.pureBlack.withAlpha(79 * 255 ~/ 100), blurRadius: 20)] : null,
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 26),
@@ -23,7 +32,7 @@ class ItemScanInput extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
-                onTap: choseImage(),
+                onTap: onTapImage,
                 child: SvgPicture.asset(
                   Assets.icons.img,
                   width: 25,
@@ -31,15 +40,15 @@ class ItemScanInput extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: flash(),
+                onTap: onTapFlash,
                 child: SvgPicture.asset(
-                  Assets.icons.flash,
+                  isFlashOff ? Assets.icons.flash : Assets.icons.flashSlash,
                   width: 25,
                   height: 25,
                 ),
               ),
               GestureDetector(
-                onTap: changeCamera(),
+                onTap: onChangeCamera,
                 child: SvgPicture.asset(
                   Assets.icons.iconChangeCam,
                   width: 25,
@@ -51,4 +60,7 @@ class ItemScanInput extends StatelessWidget {
           ),
         ),
       );
+
+  @override
+  Size get preferredSize => const Size.fromHeight(45);
 }

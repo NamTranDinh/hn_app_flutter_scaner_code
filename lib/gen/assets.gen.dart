@@ -54,8 +54,20 @@ class $AssetsIconsGen {
   /// File path: assets/icons/bell.svg
   String get bell => 'assets/icons/bell.svg';
 
+  /// File path: assets/icons/flash-slash.svg
+  String get flashSlash => 'assets/icons/flash-slash.svg';
+
   /// File path: assets/icons/flash.svg
   String get flash => 'assets/icons/flash.svg';
+
+  /// File path: assets/icons/ic_back.svg
+  String get icBack => 'assets/icons/ic_back.svg';
+
+  /// File path: assets/icons/icon_back.svg
+  String get iconBack => 'assets/icons/icon_back.svg';
+
+  /// File path: assets/icons/icon_bird.svg
+  String get iconBird => 'assets/icons/icon_bird.svg';
 
   /// File path: assets/icons/icon_back.svg
   String get iconBack => 'assets/icons/icon_back.svg';
@@ -74,6 +86,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/icon_delete.svg
   String get iconDelete => 'assets/icons/icon_delete.svg';
+
+  /// File path: assets/icons/icon_email.svg
+  String get iconEmail => 'assets/icons/icon_email.svg';
 
   /// File path: assets/icons/icon_email.svg
   String get iconEmail => 'assets/icons/icon_email.svg';
@@ -138,13 +153,18 @@ class $AssetsIconsGen {
   /// List of all assets
   List<String> get values => [
         bell,
+        flashSlash,
         flash,
+        icBack,
+        iconBack,
+        iconBird,
         iconBack,
         iconBackground,
         iconBird,
         iconChangeCam,
         iconContact,
         iconDelete,
+        iconEmail,
         iconEmail,
         iconEvent,
         iconHistory,
@@ -175,8 +195,12 @@ class $AssetsImagesGen {
   AssetGenImage get appIcon =>
       const AssetGenImage('assets/images/app_icon.png');
 
+  /// File path: assets/images/undraw_mobile_encryption.svg
+  String get undrawMobileEncryption =>
+      'assets/images/undraw_mobile_encryption.svg';
+
   /// List of all assets
-  List<AssetGenImage> get values => [appIcon];
+  List<dynamic> get values => [appIcon, undrawMobileEncryption];
 }
 
 class Assets {

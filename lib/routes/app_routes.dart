@@ -4,6 +4,11 @@ import 'package:get/get_navigation/src/routes/custom_transition.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:get/get_navigation/src/routes/route_middleware.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
+import 'package:master_scanner_app/di.dart';
+import 'package:master_scanner_app/pages/home/my_home_page.dart';
+import 'package:master_scanner_app/pages/scanner/qr_code_scanner_page.dart';
+import 'package:master_scanner_app/pages/splash/splash_page.dart';
+import 'package:master_scanner_app/routes/routes.dart';
 import 'package:qr_code_scanner/di.dart';
 import 'package:qr_code_scanner/pages/general_code/generate_business.dart';
 import 'package:qr_code_scanner/pages/general_code/generate_contact.dart';
@@ -82,6 +87,10 @@ class AppRouter {
           name: Routes.generateQrLocation,
           page: () => const GenerateLocation(),
         ),
+        _getPage(
+          name: Routes.qrCodeScannerPage,
+          page: () => const QrCodeScannerPage(),
+        ),
       ];
 
   /// Here are some commonly used attributes,
@@ -115,7 +124,7 @@ class AppRouter {
         curve: curve ?? Curves.linear,
         alignment: alignment,
         transition: transition ?? Transition.rightToLeft,
-        transitionDuration: transitionDuration,
+        transitionDuration: transitionDuration ?? const Duration(milliseconds: 250),
         customTransition: customTransition,
         /** Additional attributes*/
       );

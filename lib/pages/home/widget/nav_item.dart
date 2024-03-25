@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/core/app_text_style.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/core/app_text_style.dart';
 
 class NavItem extends StatelessWidget {
   const NavItem({

@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'package:qr_code_scanner/blocs/splash/splash_cubit.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/di.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
-import 'package:qr_code_scanner/routes/routes.dart';
+import 'package:master_scanner_app/blocs/splash/splash_cubit.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/di.dart';
+import 'package:master_scanner_app/gen/assets.gen.dart';
+import 'package:master_scanner_app/routes/routes.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
