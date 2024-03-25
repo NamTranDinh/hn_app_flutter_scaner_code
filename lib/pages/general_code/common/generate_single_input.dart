@@ -25,6 +25,7 @@ class GenerateSingleInputPage extends StatelessWidget {
   }
 
   Widget body(Size size) => Stack(
+        fit: StackFit.expand,
         alignment: Alignment.center,
         children: [
           Positioned(
@@ -33,10 +34,7 @@ class GenerateSingleInputPage extends StatelessWidget {
             height: size.height,
             child: Container(
               color: AppColor.grey,
-              child: SvgPicture.asset(
-                Assets.icons.iconBackground,
-                fit: BoxFit.fill,
-              ),
+              child: SvgPicture.asset(Assets.icons.iconBackground, fit: BoxFit.cover),
             ),
           ),
           Positioned(
@@ -48,7 +46,7 @@ class GenerateSingleInputPage extends StatelessWidget {
               validate: (v) => null,
               hint: inputHint,
               controller: controller,
-              onClick: (data) => onClick(data),
+              onClick: onClick,
             ),
           ),
         ],

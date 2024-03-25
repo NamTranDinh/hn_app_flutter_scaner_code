@@ -22,7 +22,7 @@ class ResultAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) => SafeArea(
         child: Container(
           height: kToolbarHeight,
-          color: color ?? AppColor.grey,
+          color: color ?? Colors.transparent,
           alignment: Alignment.center,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,

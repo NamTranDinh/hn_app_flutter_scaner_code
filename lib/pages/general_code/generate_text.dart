@@ -20,11 +20,10 @@ class _GenerateTextState extends State<GenerateText> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        extendBodyBehindAppBar: true,
         appBar: ResultAppBar(
           title: 'generate.text'.tr(),
-          action: () {
-            Get.back();
-          },
+          action: Get.back,
           icon: Assets.icons.iconBack,
         ),
         body: GenerateSingleInputPage(
