@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qr_code_scanner/blocs/navbar/navbar_cubit.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/di.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
-import 'package:qr_code_scanner/pages/generate/generate_page.dart';
-import 'package:qr_code_scanner/pages/history/history_page.dart';
-import 'package:qr_code_scanner/pages/home/widget/nav_bar.dart';
-import 'package:qr_code_scanner/pages/scanner/scanner_page.dart';
 import 'package:get/get.dart';
 import 'package:master_scanner_app/blocs/navbar/navbar_cubit.dart';
 import 'package:master_scanner_app/common/utils/permission_request_utils.dart';

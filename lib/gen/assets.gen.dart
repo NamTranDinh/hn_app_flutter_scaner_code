@@ -66,12 +66,6 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_back.svg
   String get iconBack => 'assets/icons/icon_back.svg';
 
-  /// File path: assets/icons/icon_bird.svg
-  String get iconBird => 'assets/icons/icon_bird.svg';
-
-  /// File path: assets/icons/icon_back.svg
-  String get iconBack => 'assets/icons/icon_back.svg';
-
   /// File path: assets/icons/icon_background.svg
   String get iconBackground => 'assets/icons/icon_background.svg';
 
@@ -86,9 +80,6 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/icon_delete.svg
   String get iconDelete => 'assets/icons/icon_delete.svg';
-
-  /// File path: assets/icons/icon_email.svg
-  String get iconEmail => 'assets/icons/icon_email.svg';
 
   /// File path: assets/icons/icon_email.svg
   String get iconEmail => 'assets/icons/icon_email.svg';
@@ -157,14 +148,11 @@ class $AssetsIconsGen {
         flash,
         icBack,
         iconBack,
-        iconBird,
-        iconBack,
         iconBackground,
         iconBird,
         iconChangeCam,
         iconContact,
         iconDelete,
-        iconEmail,
         iconEmail,
         iconEvent,
         iconHistory,

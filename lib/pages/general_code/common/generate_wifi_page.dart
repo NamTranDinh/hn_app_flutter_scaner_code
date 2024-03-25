@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qr_code_scanner/common/widgets/wifi_form_input.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
+import 'package:master_scanner_app/common/widgets/wifi_form_input.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/gen/assets.gen.dart';
 
 class GenerateWifiInputPage extends StatefulWidget {
   const GenerateWifiInputPage({
@@ -11,11 +11,12 @@ class GenerateWifiInputPage extends StatefulWidget {
     required this.onClick,
     required this.iconPath,
   });
+
   final String appBarLabel, iconPath;
   final Function(String name, String password) onClick;
 
   @override
-  _GenerateWifiInputPageState createState() => _GenerateWifiInputPageState();
+  State<GenerateWifiInputPage> createState() => _GenerateWifiInputPageState();
 }
 
 class _GenerateWifiInputPageState extends State<GenerateWifiInputPage> {

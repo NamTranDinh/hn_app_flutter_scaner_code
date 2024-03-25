@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
+import 'package:master_scanner_app/core/app_color.dart';
 
 class CustomShapeClipper extends CustomClipper<Path> {
   CustomShapeClipper({super.reclip, required this.ignorSize});

@@ -2,15 +2,15 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:qr_code_scanner/common/widgets/result_appbar.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
-import 'package:qr_code_scanner/pages/general_code/common/generate_single_input.dart';
+import 'package:master_scanner_app/common/widgets/result_appbar.dart';
+import 'package:master_scanner_app/gen/assets.gen.dart';
+import 'package:master_scanner_app/pages/general_code/common/generate_single_input.dart';
 
 class GenerateWhatsApp extends StatefulWidget {
   const GenerateWhatsApp({super.key});
 
   @override
-  _GenerateWhatsAppState createState() => _GenerateWhatsAppState();
+  State<GenerateWhatsApp> createState() => _GenerateWhatsAppState();
 }
 
 class _GenerateWhatsAppState extends State<GenerateWhatsApp> {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:qr_code_scanner/common/widgets/single_input_form.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
+import 'package:master_scanner_app/common/widgets/single_input_form.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/gen/assets.gen.dart';
 
 class GenerateSingleInputPage extends StatelessWidget {
   const GenerateSingleInputPage({
@@ -15,6 +15,7 @@ class GenerateSingleInputPage extends StatelessWidget {
     required this.iconPath,
     required this.controller,
   });
+
   final String appBarLabel, inputLabel, inputHint, iconPath;
   final Function(String data) onClick;
   final TextEditingController controller;

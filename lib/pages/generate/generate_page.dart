@@ -2,10 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:qr_code_scanner/common/widgets/appbar.dart';
-import 'package:qr_code_scanner/common/widgets/item_qr.dart';
-import 'package:qr_code_scanner/gen/assets.gen.dart';
-import 'package:qr_code_scanner/routes/routes.dart';
+import 'package:master_scanner_app/common/widgets/appbar.dart';
+import 'package:master_scanner_app/common/widgets/item_qr.dart';
+import 'package:master_scanner_app/gen/assets.gen.dart';
+import 'package:master_scanner_app/routes/routes.dart';
 
 class GeneratePage extends StatelessWidget {
   const GeneratePage({super.key});
