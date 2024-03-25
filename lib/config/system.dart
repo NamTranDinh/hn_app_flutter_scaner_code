@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qr_code_scanner/flavors.dart';
+import 'package:master_scanner_app/flavors.dart';
 
 class System {
   static const supportedLocales = [

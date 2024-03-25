@@ -1,4 +1,4 @@
-package com.neil.qr_code_scanner
+package com.neil.master_scanner_app
 
 import io.flutter.embedding.android.FlutterActivity
 

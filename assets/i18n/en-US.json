@@ -13,5 +13,50 @@
     "bar": "History",
     "scan": "Scan",
     "create": "Create"
+  },
+  "wifi_form": {
+    "title": "Generate QR Code",
+    "title_name": "Wifi name",
+    "title_password": "Password",
+    "hint_name": "Enter name",
+    "hint_password": "Enter password"
+  },
+  "generate": {
+    "appbar_title": "Generate QR",
+    "text": "Text",
+    "text_hint": "Enter text",
+    "website": "Website",
+    "wifi": "Wi-Fi",
+    "event": "Event",
+    "contact": "Contact",
+    "business": "Business",
+    "location": "Location",
+    "whatsapp": "WhatsApp",
+    "whatsapp_label": "WhatsApp user",
+    "whatsapp_hint": "Enter number",
+    "email": "Email",
+    "email_hint": "Enter your email",
+    "twitter": "Twitter",
+    "twitter_label": "Twitter username",
+    "twitter_hint": "Enter twitter username",
+    "instagram": "Instagram",
+    "instagram_label": "Instagram user",
+    "instagram_hint": "Instagram user",
+    "phone": "Phone",
+    "phone_hint": "+90xxxxxxx",
+    "phone_label": "Phone number"
+  },
+  "qr_code_scanner_page": {
+    "title": "Move the camera to the QR code to scan",
+    "cancel_btn": "Bỏ qua",
+    "no_permission": "No camera permission"
+  },
+  "dialog": {
+    "request_permission": {
+      "open_setting": "Open setting",
+      "content": "We'll need your permission before accessing your camera!",
+      "camera": "Camera",
+      "not_now": "Not now"
+    }
   }
 }

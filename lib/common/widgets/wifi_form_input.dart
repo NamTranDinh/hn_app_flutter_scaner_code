@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qr_code_scanner/common/widgets/item_button.dart';
-import 'package:qr_code_scanner/common/widgets/item_text_input.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
+import 'package:master_scanner_app/common/widgets/item_button.dart';
+import 'package:master_scanner_app/common/widgets/item_text_input.dart';
+import 'package:master_scanner_app/core/app_color.dart';
 
 class WifiInputForm extends StatefulWidget {
   const WifiInputForm({
@@ -11,12 +11,10 @@ class WifiInputForm extends StatefulWidget {
     required this.iconPath,
     required this.validate,
     required this.onClick,
-    required this.label,
-    required this.hint,
     required this.nameController,
     required this.passwordController,
   });
-  final String iconPath, label, hint;
+  final String iconPath;
   final String? Function(String?) validate;
   final Function(String email, String password) onClick;
   final TextEditingController nameController;
@@ -35,6 +33,7 @@ class _WifiInputFormState extends State<WifiInputForm> {
   @override
   Widget build(BuildContext context) => DecoratedBox(
         decoration: BoxDecoration(
+          color: AppColor.grey,
           borderRadius: BorderRadius.circular(6),
           border: const Border(
             top: BorderSide(

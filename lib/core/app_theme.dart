@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/gen/fonts.gen.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/gen/fonts.gen.dart';
 
 class AppTheme {
   AppTheme._();
@@ -12,7 +12,7 @@ class AppTheme {
     highlightColor: AppColor.primaryYellow[10],
     indicatorColor: AppColor.primaryYellow,
     scaffoldBackgroundColor: Colors.white,
-    appBarTheme: const AppBarTheme(color: AppColor.grey, centerTitle: true),
+    appBarTheme: AppBarTheme(color: AppColor.grey.withAlpha((255 * 0.82).toInt()), centerTitle: true),
     dialogTheme: const DialogTheme(
       backgroundColor: AppColor.white,
       alignment: Alignment.center,
@@ -80,10 +80,7 @@ class AppTheme {
     //   borderRadius: BorderRadius.circular(8.0),
     // ),
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(
-        foregroundColor: Colors.black54,
-        shape: const RoundedRectangleBorder(side: BorderSide(color: Colors.grey)),
-      ),
+      style: TextButton.styleFrom(foregroundColor: Colors.black54),
     ),
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: Colors.white,

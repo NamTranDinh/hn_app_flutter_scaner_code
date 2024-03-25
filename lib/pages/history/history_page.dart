@@ -1,8 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
-import 'package:qr_code_scanner/common/widgets/appbar.dart';
-import 'package:qr_code_scanner/common/widgets/item_qr_result.dart';
-import 'package:qr_code_scanner/pages/history/widget/item_switch.dart';
+import 'package:master_scanner_app/material.dart';
 
 class HistoryPage extends StatefulWidget {
   const HistoryPage({super.key});
