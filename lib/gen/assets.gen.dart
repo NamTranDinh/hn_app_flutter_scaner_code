@@ -63,6 +63,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_back.svg
   String get icBack => 'assets/icons/ic_back.svg';
 
+  /// File path: assets/icons/ic_save.svg
+  String get icSave => 'assets/icons/ic_save.svg';
+
   /// File path: assets/icons/icon_back.svg
   String get iconBack => 'assets/icons/icon_back.svg';
 
@@ -147,6 +150,7 @@ class $AssetsIconsGen {
         flashSlash,
         flash,
         icBack,
+        icSave,
         iconBack,
         iconBackground,
         iconBird,
