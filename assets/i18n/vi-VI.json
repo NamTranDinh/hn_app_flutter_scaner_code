@@ -11,7 +11,7 @@
   },
   "qr_code_scanner_page": {
     "title": "Move the camera to the QR code to scan",
-    "cancel_btn": "Bỏ qua",
+    "cancel_btn": "Cancel",
     "no_permission": "No camera permission"
   },
   "dialog": {
@@ -28,6 +28,21 @@
     "title_password": "Password",
     "hint_name": "Enter name",
     "hint_password": "Enter password"
+  },
+  "result_page": {
+    "title": "Result"
+  },
+  "qr_code_page": {
+    "title": "QR Code"
+  },
+  "button_action": {
+    "share": "Share",
+    "copy": "Copy",
+    "save": "Save",
+    "back": "Back",
+    "show_more": "Show more",
+    "show_less": "Show less",
+    "show_qr_code": "Show QR Code"
   },
   "generate": {
     "appbar_title": "Generate QR",

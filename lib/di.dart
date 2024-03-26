@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:master_scanner_app/blocs/navbar/navbar_cubit.dart';
+import 'package:master_scanner_app/blocs/qr_code/qr_code_cubit.dart';
 import 'package:master_scanner_app/blocs/splash/splash_cubit.dart';
 
 final getIt = GetIt.instance;
@@ -12,7 +13,8 @@ Future<void> init() async {
    */
   getIt
     ..registerFactory(SplashCubit.new)
-    ..registerFactory(NavbarCubit.new);
+    ..registerFactory(NavbarCubit.new)
+    ..registerFactory(QrCodeCubit.new);
 
   /**
    * ┌──────────────────────────────────────────────────────────────────────────

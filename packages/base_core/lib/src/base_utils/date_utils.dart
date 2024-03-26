@@ -453,4 +453,43 @@ class DateUtils {
     final diffInDays = diff.inDays;
     return ((diffInDays - date.weekday + 10) / 7).floor();
   }
+
+  /// Formats a DateTime to a string using a specified formatter.
+  ///
+  /// If [dateTime] is null, the current DateTime will be used.
+  /// If [formatter] is null, the default format 'dd/MM/yyyy' will be used.
+  ///
+  /// Returns the formatted DateTime string.
+  static String formatDateTimeToString({DateTime? dateTime, String? formatter}) {
+    DateTime currentDateTime = dateTime ?? DateTime.now();
+
+    if (formatter != null) {
+      return DateFormat(formatter).format(currentDateTime);
+    } else {
+      return DateFormat('dd/MM/yyyy').format(currentDateTime);
+    }
+  }
+
+  /// Parses a string representing a date and time into a [DateTime] object.
+  ///
+  /// The [dateString] should be in the format: 'dd MMM yyyy, h:mm a'.
+  ///
+  /// If parsing fails, it returns the current DateTime.
+  ///
+  /// Example:
+  /// ```dart
+  /// String dateString = '16 Dec 2022, 9:30 pm';
+  /// DateTime dateTime = stringToDateTime(dateString);
+  /// print(dateTime); // Output: 2022-12-16 21:30:00.000
+  /// ```
+  static DateTime formatStringToDateTime({String? dateString}) {
+    try {
+      final date = dateString ?? formatDateTimeToString(formatter: 'dd MMM yyyy, h:mm a');
+      final DateFormat formatter = DateFormat('dd MMM yyyy, h:mm a');
+      return formatter.parse(date);
+    } catch (e) {
+      print('Error parsing DateTime: $e');
+      return DateTime.now();
+    }
+  }
 }
