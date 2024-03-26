@@ -13,7 +13,7 @@ class ItemSupport extends StatelessWidget {
   });
 
   final String title, description, iconSrc;
-  final Function onTap;
+  final Function() onTap;
 
   @override
   Widget build(BuildContext context) => Container(

@@ -30,6 +30,7 @@ class _GenerateTwitterState extends State<GenerateTwitter> {
           },
           controller: controller,
         ),
+        extendBodyBehindAppBar: true,
         appBar: ResultAppBar(
           title: 'generate.twitter'.tr(),
           action: () {

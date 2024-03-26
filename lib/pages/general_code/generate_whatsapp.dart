@@ -30,6 +30,7 @@ class _GenerateWhatsAppState extends State<GenerateWhatsApp> {
           },
           controller: controller,
         ),
+        extendBodyBehindAppBar: true,
         appBar: ResultAppBar(
           title: 'generate.whatsapp'.tr(),
           action: () {

@@ -7,7 +7,7 @@ class ItemIconButton extends StatelessWidget {
   const ItemIconButton({super.key, required this.title, required this.icon, required this.onTap});
 
   final String title, icon;
-  final Function onTap;
+  final Function() onTap;
 
   @override
   Widget build(BuildContext context) => Column(

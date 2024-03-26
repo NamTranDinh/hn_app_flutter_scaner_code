@@ -9,6 +9,11 @@
       "history": "History"
     }
   },
+  "history_page": {
+    "bar": "History",
+    "scan": "Scan",
+    "create": "Create"
+  },
   "qr_code_scanner_page": {
     "title": "Move the camera to the QR code to scan",
     "cancel_btn": "Cancel",

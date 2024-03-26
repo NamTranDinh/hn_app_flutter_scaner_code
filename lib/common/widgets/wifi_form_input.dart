@@ -5,7 +5,7 @@ import 'package:master_scanner_app/common/widgets/item_button.dart';
 import 'package:master_scanner_app/common/widgets/item_text_input.dart';
 import 'package:master_scanner_app/core/app_color.dart';
 
-class WifiInputForm extends StatefulWidget {
+class WifiInputForm extends StatelessWidget {
   const WifiInputForm({
     super.key,
     required this.iconPath,
@@ -19,16 +19,6 @@ class WifiInputForm extends StatefulWidget {
   final Function(String email, String password) onClick;
   final TextEditingController nameController;
   final TextEditingController passwordController;
-
-  @override
-  State<WifiInputForm> createState() => _WifiInputFormState();
-}
-
-class _WifiInputFormState extends State<WifiInputForm> {
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) => DecoratedBox(
@@ -52,7 +42,7 @@ class _WifiInputFormState extends State<WifiInputForm> {
             mainAxisSize: MainAxisSize.min,
             children: [
               SvgPicture.asset(
-                widget.iconPath,
+                iconPath,
                 colorFilter: const ColorFilter.mode(AppColor.primaryYellow, BlendMode.srcIn),
                 width: 60,
                 height: 60,
@@ -62,7 +52,7 @@ class _WifiInputFormState extends State<WifiInputForm> {
                 padding: const EdgeInsets.only(top: 18, bottom: 6),
                 child: ItemTextInput(
                   label: 'wifi_form.title_name'.tr(),
-                  controller: widget.nameController,
+                  controller: nameController,
                   hint: 'wifi_form.hint_name'.tr(),
                 ),
               ),
@@ -70,15 +60,15 @@ class _WifiInputFormState extends State<WifiInputForm> {
                 padding: const EdgeInsets.only(bottom: 48),
                 child: ItemTextInput(
                   label: 'wifi_form.title_password'.tr(),
-                  controller: widget.passwordController,
+                  controller: passwordController,
                   hint: 'wifi_form.hint_password'.tr(),
-                  validate: widget.validate,
+                  validate: validate,
                 ),
               ),
               ItemButton(
                 title: 'wifi_form.title'.tr(),
                 onTap: () {
-                  widget.onClick(widget.nameController.text, widget.passwordController.text);
+                  onClick(nameController.text, passwordController.text);
                 },
               ),
             ],
