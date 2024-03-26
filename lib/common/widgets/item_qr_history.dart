@@ -4,8 +4,8 @@ import 'package:master_scanner_app/core/app_color.dart';
 import 'package:master_scanner_app/core/app_text_style.dart';
 import 'package:master_scanner_app/gen/assets.gen.dart';
 
-class ItemQrResult extends StatelessWidget {
-  const ItemQrResult({
+class ItemQrHistory extends StatelessWidget {
+  const ItemQrHistory({
     super.key,
     required this.onDelete,
     required this.data,
