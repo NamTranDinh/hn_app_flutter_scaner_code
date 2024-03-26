@@ -14,7 +14,7 @@ class ItemQrResult extends StatelessWidget {
     required this.onCopy,
   });
 
-  final Function onDelete, onCopy;
+  final Function() onDelete, onCopy;
   final String data, type, date;
 
   @override

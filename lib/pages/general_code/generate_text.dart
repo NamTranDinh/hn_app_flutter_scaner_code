@@ -20,6 +20,7 @@ class _GenerateTextState extends State<GenerateText> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        extendBody: true,
         appBar: ResultAppBar(
           title: 'generate.text'.tr(),
           action: () {

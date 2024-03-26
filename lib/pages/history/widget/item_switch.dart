@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:qr_code_scanner/core/app_color.dart';
-import 'package:qr_code_scanner/core/app_text_style.dart';
+import 'package:master_scanner_app/core/app_color.dart';
+import 'package:master_scanner_app/core/app_text_style.dart';
 
 class CustomSwitch extends StatefulWidget {
   const CustomSwitch({super.key, required this.onChanged, required this.value});
