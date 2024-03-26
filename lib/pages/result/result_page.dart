@@ -9,6 +9,7 @@ import 'package:master_scanner_app/common/widgets/item_result_detail.dart';
 import 'package:master_scanner_app/common/widgets/result_appbar.dart';
 import 'package:master_scanner_app/gen/assets.gen.dart';
 import 'package:master_scanner_app/modes/qr_code_result_model.dart';
+import 'package:master_scanner_app/routes/routes.dart';
 
 class ResultPage extends StatelessWidget {
   const ResultPage({super.key, required this.data});
@@ -52,6 +53,7 @@ class ResultPage extends StatelessWidget {
                               dateTime: base_core.DateUtils.formatStringToDateTime(dateString: data.createDate),
                               formatter: 'd MMM y, h:mm a',
                             ),
+                            onTapShowQrCode: () => Get.toNamed(Routes.qrCodePage, arguments: data),
                           ),
                         ),
                       ),

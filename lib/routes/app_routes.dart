@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:master_scanner_app/modes/qr_code_result_model.dart';
 import 'package:master_scanner_app/pages/general_code/generate_business.dart';
 import 'package:master_scanner_app/pages/general_code/generate_contact.dart';
 import 'package:master_scanner_app/pages/general_code/generate_email.dart';
@@ -13,6 +14,7 @@ import 'package:master_scanner_app/pages/general_code/generate_web.dart';
 import 'package:master_scanner_app/pages/general_code/generate_whatsapp.dart';
 import 'package:master_scanner_app/pages/general_code/generate_wifi.dart';
 import 'package:master_scanner_app/pages/home/my_home_page.dart';
+import 'package:master_scanner_app/pages/not_found_page/not_found_page.dart';
 import 'package:master_scanner_app/pages/qr_code/qr_code_page.dart';
 import 'package:master_scanner_app/pages/result/result_page.dart';
 import 'package:master_scanner_app/pages/scanner/qr_code_scanner_page.dart';
@@ -83,11 +85,25 @@ class AppRouter {
         ),
         _getPage(
           name: Routes.resultPage,
-          page: () => ResultPage(data: Get.arguments),
+          page: () {
+            final data = Get.arguments;
+            if (data != null && data is QrCodeResultModel) {
+              return ResultPage(data: Get.arguments);
+            } else {
+              return const NotFoundPage();
+            }
+          },
         ),
         _getPage(
           name: Routes.qrCodePage,
-          page: () => const QrCodePage(),
+          page: () {
+            final data = Get.arguments;
+            if (data != null && data is QrCodeResultModel) {
+              return QrCodePage(data: Get.arguments);
+            } else {
+              return const NotFoundPage();
+            }
+          },
         ),
       ];
 

@@ -2,17 +2,21 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:master_scanner_app/core/app_color.dart';
 import 'package:master_scanner_app/core/app_text_style.dart';
 import 'package:master_scanner_app/gen/assets.gen.dart';
-import 'package:master_scanner_app/routes/routes.dart';
 
 class ItemResultDetail extends StatelessWidget {
-  const ItemResultDetail({super.key, required this.type, required this.date, required this.data});
+  const ItemResultDetail({
+    super.key,
+    required this.type,
+    required this.date,
+    required this.data,
+    required this.onTapShowQrCode,
+  });
 
   final String type, date, data;
+  final Function() onTapShowQrCode;
 
   @override
   Widget build(BuildContext context) => DecoratedBox(
@@ -76,7 +80,7 @@ class ItemResultDetail extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () => Get.toNamed(Routes.qrCodePage),
+                onPressed: onTapShowQrCode,
                 child: Text(
                   'button_action.show_qr_code'.tr(),
                   style: AppTextStyle.title3.copyWith(fontSize: 15, color: AppColor.primaryYellow),

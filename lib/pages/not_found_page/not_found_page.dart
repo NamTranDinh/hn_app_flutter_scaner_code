@@ -1,6 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:lottie/lottie.dart';
+import 'package:master_scanner_app/common/widgets/item_button.dart';
 import 'package:master_scanner_app/core/app_extension.dart';
 import 'package:master_scanner_app/core/app_text_style.dart';
 import 'package:master_scanner_app/gen/assets.gen.dart';
@@ -47,6 +50,7 @@ class NotFoundPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 36),
+              ItemButton(title: 'button_action.back'.tr(), onTap: Get.back),
             ],
           ),
         ),
