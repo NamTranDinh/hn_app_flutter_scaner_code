@@ -28,6 +28,7 @@ class _GenerateTextState extends State<GenerateText> {
           },
           icon: Assets.icons.iconBack,
         ),
+        extendBodyBehindAppBar: true,
         body: GenerateSingleInputPage(
           iconPath: Assets.icons.iconText,
           appBarLabel: 'generate.text'.tr(),

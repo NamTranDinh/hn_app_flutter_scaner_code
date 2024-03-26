@@ -20,6 +20,7 @@ class _GenerateInstagramState extends State<GenerateInstagram> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        extendBodyBehindAppBar: true,
         body: GenerateSingleInputPage(
           iconPath: Assets.icons.iconInsta,
           appBarLabel: 'generate.instagram'.tr(),

@@ -37,5 +37,6 @@ class _GenerateEmailState extends State<GenerateEmail> {
           },
           icon: Assets.icons.iconBack,
         ),
+        extendBodyBehindAppBar: true,
       );
 }

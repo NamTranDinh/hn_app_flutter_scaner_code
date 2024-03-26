@@ -23,5 +23,6 @@ class GenerateWifi extends StatelessWidget {
           },
           icon: Assets.icons.iconBack,
         ),
+        extendBodyBehindAppBar: true,
       );
 }

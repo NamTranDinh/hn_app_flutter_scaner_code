@@ -59,6 +59,10 @@ class ItemTextInput extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                     borderSide: BorderSide(color: AppColor.whiteLight.withAlpha((255 * 0.8).toInt())),
                   ),
+                  errorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: BorderSide(color: AppColor.error.withAlpha((255 * 0.8).toInt())),
+                  ),
                   hintStyle: AppTextStyle.caption2.copyWith(color: AppColor.whiteLight.withAlpha((255 * 0.34).toInt())),
                   fillColor: AppColor.lightGrey2.withAlpha((255 * 0.78).toInt()),
                   filled: true,

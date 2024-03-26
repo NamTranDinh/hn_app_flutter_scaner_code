@@ -20,6 +20,7 @@ class _GeneratePhoneState extends State<GeneratePhone> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        extendBodyBehindAppBar: true,
         body: GenerateSingleInputPage(
           iconPath: Assets.icons.iconPhoneNumber,
           appBarLabel: 'generate.phone'.tr(),
