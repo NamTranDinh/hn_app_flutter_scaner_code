@@ -17,30 +17,25 @@ class ItemQr extends StatelessWidget {
           clipBehavior: Clip.none,
           alignment: Alignment.bottomCenter,
           children: [
-            Align(
-              alignment: Alignment.center,
-              child: Container(
-                width: 89,
-                height: 89,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: AppColor.grey,
-                  boxShadow: [
-                    BoxShadow(color: AppColor.pureBlack.withAlpha(144), blurRadius: 12),
-                  ],
-                ),
-                child: Center(
-                  child: SvgPicture.asset(
-                    iconSrc,
-                    width: 34,
-                    fit: BoxFit.contain,
-                    colorFilter: const ColorFilter.mode(AppColor.grey, BlendMode.color),
-                  ),
+            DecoratedBox(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: AppColor.grey,
+                boxShadow: [
+                  BoxShadow(color: AppColor.pureBlack.withAlpha(144), blurRadius: 12),
+                ],
+              ),
+              child: Center(
+                child: SvgPicture.asset(
+                  iconSrc,
+                  width: 34,
+                  fit: BoxFit.contain,
+                  colorFilter: const ColorFilter.mode(AppColor.grey, BlendMode.color),
                 ),
               ),
             ),
             Positioned(
-              bottom: -8,
+              bottom: -(21 / 2),
               child: Container(
                 height: 21,
                 padding: const EdgeInsets.symmetric(horizontal: 8),
