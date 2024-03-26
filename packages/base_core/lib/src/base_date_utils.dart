@@ -109,10 +109,6 @@ class AppDateUtils {
     return newDate;
   }
 
-  static bool isSpecialPastDay(DateTime date) {
-    return isPastDay(date) || (isToday(date) && DateTime.now().hour >= 12);
-  }
-
   static DateTime getFirstDayOfCurrentMonth() {
     var dateTime = DateTime.now();
     dateTime = getFirstDayOfMonth(dateTime);
@@ -226,19 +222,6 @@ class AppDateUtils {
   static DateTime findLastDateOfNextWeek(DateTime dateTime) {
     final DateTime sameWeekDayOfNextWeek = dateTime.add(const Duration(days: 7));
     return findLastDateOfTheWeek(sameWeekDayOfNextWeek);
-  }
-
-  static bool checkExpiredToken(int? expiredToken, int? startDate) {
-    if (expiredToken == null || startDate == null) {
-      return true;
-    }
-    var currentTime = DateTime.now().millisecondsSinceEpoch;
-    var expiredMillisecond = expiredToken * 1000;
-    if (startDate + expiredMillisecond < currentTime) {
-      return false;
-    } else {
-      return true;
-    }
   }
 
   static bool compareDate(DateTime firstDate, DateTime twoDate) {

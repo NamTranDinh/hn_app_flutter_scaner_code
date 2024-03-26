@@ -15,6 +15,7 @@ class SingerInputForm extends StatelessWidget {
     required this.hint,
     required this.controller,
   });
+
   final String iconPath, label, hint;
   final String? Function(String?) validate;
   final Function(String) onClick;
@@ -26,14 +27,8 @@ class SingerInputForm extends StatelessWidget {
           color: AppColor.grey,
           borderRadius: BorderRadius.circular(6),
           border: const Border(
-            top: BorderSide(
-              color: AppColor.primaryYellow,
-              width: 2.0,
-            ),
-            bottom: BorderSide(
-              color: AppColor.primaryYellow,
-              width: 2.0,
-            ),
+            top: BorderSide(color: AppColor.primaryYellow, width: 2.0),
+            bottom: BorderSide(color: AppColor.primaryYellow, width: 2.0),
           ),
           boxShadow: [BoxShadow(color: AppColor.pureBlack.withAlpha(125), blurRadius: 12)],
         ),

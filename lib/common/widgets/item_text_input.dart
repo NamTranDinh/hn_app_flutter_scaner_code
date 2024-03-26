@@ -20,61 +20,44 @@ class ItemTextInput extends StatelessWidget {
   final TextEditingController controller;
 
   @override
-  Widget build(BuildContext context) => SizedBox(
-        height: 80,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ConstrainedBox(
-              constraints: const BoxConstraints(maxHeight: 35),
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 8),
-                child: Text(
-                  label,
-                  style: AppTextStyle.footNote2.copyWith(color: AppColor.whiteLight),
-                ),
+  Widget build(BuildContext context) => Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(label, style: AppTextStyle.footNote2.copyWith(color: AppColor.whiteLight)),
+          const SizedBox(height: 8),
+          TextFormField(
+            textAlignVertical: TextAlignVertical.center,
+            controller: controller,
+            decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 12),
+              hintText: hint,
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: BorderSide(color: AppColor.whiteLight.withAlpha((255 * 0.8).toInt())),
               ),
-            ),
-            ConstrainedBox(
-              constraints: const BoxConstraints(maxHeight: 45),
-              child: TextFormField(
-                textAlignVertical: TextAlignVertical.center,
-                controller: controller,
-                decoration: InputDecoration(
-                  hintText: hint,
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: AppColor.whiteLight.withAlpha((255 * 0.8).toInt())),
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: AppColor.whiteLight.withAlpha((255 * 0.8).toInt())),
-                  ),
-                  disabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: AppColor.whiteLight.withAlpha((255 * 0.8).toInt())),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: AppColor.whiteLight.withAlpha((255 * 0.8).toInt())),
-                  ),
-                  errorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: AppColor.error.withAlpha((255 * 0.8).toInt())),
-                  ),
-                  hintStyle: AppTextStyle.caption2.copyWith(color: AppColor.whiteLight.withAlpha((255 * 0.34).toInt())),
-                  fillColor: AppColor.lightGrey2.withAlpha((255 * 0.78).toInt()),
-                  filled: true,
-                ),
-                style: AppTextStyle.caption2.copyWith(color: AppColor.whiteLight),
-                textAlign: TextAlign.start,
-                textInputAction: action ?? TextInputAction.done,
-                keyboardType: keyboard ?? TextInputType.text,
-                validator: validate,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: BorderSide(color: AppColor.whiteLight.withAlpha((255 * 0.8).toInt())),
               ),
+              disabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: BorderSide(color: AppColor.whiteLight.withAlpha((255 * 0.8).toInt())),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: BorderSide(color: AppColor.whiteLight.withAlpha((255 * 0.8).toInt())),
+              ),
+              hintStyle: AppTextStyle.caption2.copyWith(color: AppColor.whiteLight.withAlpha((255 * 0.34).toInt())),
+              fillColor: AppColor.lightGrey2.withAlpha((255 * 0.78).toInt()),
+              filled: true,
             ),
-          ],
-        ),
+            style: AppTextStyle.caption2.copyWith(color: AppColor.whiteLight),
+            textAlign: TextAlign.start,
+            textInputAction: action ?? TextInputAction.done,
+            keyboardType: keyboard ?? TextInputType.text,
+            validator: validate,
+          ),
+        ],
       );
 }

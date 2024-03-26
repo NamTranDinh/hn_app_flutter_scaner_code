@@ -57,9 +57,7 @@ class MyHomePage extends StatelessWidget {
                   onPressed: () async {
                     await PermissionRequestUtil.checkCameraPermission(context).then((value) {
                       if (value.isGranted || value.isLimited || value.isProvisional || value.isRestricted) {
-                        Get.toNamed(Routes.qrCodeScannerPage)?.then((value) {
-                          // TODO(nam): handle logic when scanner QR code successfully
-                        });
+                        Get.toNamed(Routes.qrCodeScannerPage);
                       }
                     });
                   },

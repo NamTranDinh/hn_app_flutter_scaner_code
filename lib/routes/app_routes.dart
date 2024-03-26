@@ -1,10 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:get/get_instance/src/bindings_interface.dart';
-import 'package:get/get_navigation/src/routes/custom_transition.dart';
-import 'package:get/get_navigation/src/routes/get_route.dart';
-import 'package:get/get_navigation/src/routes/route_middleware.dart';
-import 'package:get/get_navigation/src/routes/transitions_type.dart';
-import 'package:master_scanner_app/di.dart';
+import 'package:get/get.dart';
+import 'package:master_scanner_app/modes/qr_code_result_model.dart';
 import 'package:master_scanner_app/pages/general_code/generate_business.dart';
 import 'package:master_scanner_app/pages/general_code/generate_contact.dart';
 import 'package:master_scanner_app/pages/general_code/generate_email.dart';
@@ -18,11 +14,12 @@ import 'package:master_scanner_app/pages/general_code/generate_web.dart';
 import 'package:master_scanner_app/pages/general_code/generate_whatsapp.dart';
 import 'package:master_scanner_app/pages/general_code/generate_wifi.dart';
 import 'package:master_scanner_app/pages/home/my_home_page.dart';
+import 'package:master_scanner_app/pages/not_found_page/not_found_page.dart';
+import 'package:master_scanner_app/pages/qr_code/qr_code_page.dart';
+import 'package:master_scanner_app/pages/result/result_page.dart';
 import 'package:master_scanner_app/pages/scanner/qr_code_scanner_page.dart';
 import 'package:master_scanner_app/pages/splash/splash_page.dart';
 import 'package:master_scanner_app/routes/routes.dart';
-
-final getPage = getIt.get<AppRouter>();
 
 class AppRouter {
   List<GetPage> get routes => <GetPage>[
@@ -85,6 +82,28 @@ class AppRouter {
         _getPage(
           name: Routes.qrCodeScannerPage,
           page: () => const QrCodeScannerPage(),
+        ),
+        _getPage(
+          name: Routes.resultPage,
+          page: () {
+            final data = Get.arguments;
+            if (data != null && data is QrCodeResultModel) {
+              return ResultPage(data: Get.arguments);
+            } else {
+              return const NotFoundPage();
+            }
+          },
+        ),
+        _getPage(
+          name: Routes.qrCodePage,
+          page: () {
+            final data = Get.arguments;
+            if (data != null && data is QrCodeResultModel) {
+              return QrCodePage(data: Get.arguments);
+            } else {
+              return const NotFoundPage();
+            }
+          },
         ),
       ];
 

@@ -21,7 +21,7 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) => SafeArea(
         child: Container(
-          height: 60,
+          height: 65,
           decoration: BoxDecoration(
             color: AppColor.grey,
             borderRadius: BorderRadius.circular(10),
