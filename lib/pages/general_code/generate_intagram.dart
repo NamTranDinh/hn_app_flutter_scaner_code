@@ -4,7 +4,9 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:master_scanner_app/common/widgets/result_appbar.dart';
 import 'package:master_scanner_app/gen/assets.gen.dart';
+import 'package:master_scanner_app/modes/qr_code_result_model.dart';
 import 'package:master_scanner_app/pages/general_code/common/generate_single_input.dart';
+import 'package:master_scanner_app/routes/routes.dart';
 
 class GenerateInstagram extends StatefulWidget {
   const GenerateInstagram({super.key});
@@ -14,25 +16,32 @@ class GenerateInstagram extends StatefulWidget {
 }
 
 class _GenerateInstagramState extends State<GenerateInstagram> {
-  _GenerateInstagramState();
-
+  final _formKey = GlobalKey<FormState>();
   final TextEditingController controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) => Scaffold(
         extendBodyBehindAppBar: true,
-        body: GenerateSingleInputPage(
-          iconPath: Assets.icons.iconInsta,
-          appBarLabel: 'generate.instagram'.tr(),
-          inputLabel: 'generate.instagram_label'.tr(),
-          inputHint: 'generate.instagram_hint'.tr(),
-          onClick: (data) {
-            Get.back();
-          },
-          controller: controller,
-          validate: (String? v) {
-            return null;
-          },
+        body: Form(
+          key: _formKey,
+          child: GenerateSingleInputPage(
+            iconPath: Assets.icons.iconInsta,
+            appBarLabel: 'generate.instagram'.tr(),
+            inputLabel: 'generate.instagram_label'.tr(),
+            inputHint: 'generate.instagram_hint'.tr(),
+            onClick: (data) {
+              if (_formKey.currentState?.validate() ?? false) {
+                Get.toNamed(Routes.resultPage, arguments: QrCodeResultModel(data: data));
+              }
+            },
+            validate: (value) {
+              if (value == null || value.trim() == '') {
+                return 'error.required'.tr();
+              }
+              return null;
+            },
+            controller: controller,
+          ),
         ),
         appBar: ResultAppBar(
           title: 'generate.instagram'.tr(),

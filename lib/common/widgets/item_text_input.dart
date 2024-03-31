@@ -31,6 +31,7 @@ class ItemTextInput extends StatelessWidget {
           TextFormField(
             textAlignVertical: TextAlignVertical.center,
             controller: controller,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: InputDecoration(
               contentPadding: const EdgeInsets.symmetric(horizontal: 12),
               hintText: hint,

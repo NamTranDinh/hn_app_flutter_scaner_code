@@ -13,6 +13,7 @@ class AppTheme {
     indicatorColor: AppColor.primaryYellow,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: AppBarTheme(color: AppColor.grey.withAlpha((255 * 0.82).toInt()), centerTitle: true),
+    textSelectionTheme: const TextSelectionThemeData(cursorColor: AppColor.primaryYellow),
     dialogTheme: const DialogTheme(
       backgroundColor: AppColor.white,
       alignment: Alignment.center,

@@ -7,15 +7,15 @@ class QrCodeState extends Equatable {
     this.errorMessage,
   });
 
-  factory QrCodeState.init() => const QrCodeState(status: Status.init);
+  factory QrCodeState.init() => const QrCodeState(status: base_core.Status.init);
 
   final QrCodeResultModel? data;
   final String? errorMessage;
-  final Status? status;
+  final base_core.Status? status;
 
   QrCodeState copyWith({
     QrCodeResultModel? data,
-    Status? status,
+    base_core.Status? status,
     String? errorMessage,
   }) =>
       QrCodeState(

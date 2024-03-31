@@ -54,6 +54,7 @@ class WifiInputForm extends StatelessWidget {
                   label: 'wifi_form.title_name'.tr(),
                   controller: nameController,
                   hint: 'wifi_form.hint_name'.tr(),
+                  validate: validate,
                 ),
               ),
               Padding(

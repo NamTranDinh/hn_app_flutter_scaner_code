@@ -191,12 +191,19 @@ class $AssetsImagesGen {
   AssetGenImage get appIcon =>
       const AssetGenImage('assets/images/app_icon.png');
 
+  /// File path: assets/images/appstore.svg
+  String get appstore => 'assets/images/appstore.svg';
+
+  /// File path: assets/images/chplay.svg
+  String get chplay => 'assets/images/chplay.svg';
+
   /// File path: assets/images/undraw_mobile_encryption.svg
   String get undrawMobileEncryption =>
       'assets/images/undraw_mobile_encryption.svg';
 
   /// List of all assets
-  List<dynamic> get values => [appIcon, undrawMobileEncryption];
+  List<dynamic> get values =>
+      [appIcon, appstore, chplay, undrawMobileEncryption];
 }
 
 class Assets {
