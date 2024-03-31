@@ -16,4 +16,5 @@ class Routes {
   static String qrCodeScannerPage = '/qrCodeScannerPage';
   static String qrCodePage = '/qrCodePage';
   static String resultPage = '/resultPage';
+  static String templateQrCodeDownloadPage = '/templateQrCodeDownloadPage';
 }

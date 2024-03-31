@@ -73,5 +73,9 @@
     "phone": "Phone",
     "phone_hint": "+90xxxxxxx",
     "phone_label": "Phone number"
+  },
+  "error": {
+    "download_error": "Download fail",
+    "download_success": "Download success"
   }
 }

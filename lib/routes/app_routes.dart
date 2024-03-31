@@ -16,6 +16,7 @@ import 'package:master_scanner_app/pages/general_code/generate_wifi.dart';
 import 'package:master_scanner_app/pages/home/my_home_page.dart';
 import 'package:master_scanner_app/pages/not_found_page/not_found_page.dart';
 import 'package:master_scanner_app/pages/qr_code/qr_code_page.dart';
+import 'package:master_scanner_app/pages/qr_code/template_qr_code_download.dart';
 import 'package:master_scanner_app/pages/result/result_page.dart';
 import 'package:master_scanner_app/pages/scanner/qr_code_scanner_page.dart';
 import 'package:master_scanner_app/pages/splash/splash_page.dart';
@@ -100,6 +101,20 @@ class AppRouter {
             final data = Get.arguments;
             if (data != null && data is QrCodeResultModel) {
               return QrCodePage(data: Get.arguments);
+            } else {
+              return const NotFoundPage();
+            }
+          },
+        ),
+        _getPage(
+          name: Routes.templateQrCodeDownloadPage,
+          page: () {
+            final data = Get.arguments;
+            if (data != null && data['widget'] is Widget && data['size'] is Size) {
+              return TemplateQrCodeDownload(
+                qrCodeWidget: data['widget'],
+                size: data['size'],
+              );
             } else {
               return const NotFoundPage();
             }
