@@ -125,7 +125,7 @@ class _GenerateEventState extends State<GenerateEvent> {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
       appBar: ResultAppBar(

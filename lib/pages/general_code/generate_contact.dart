@@ -28,6 +28,7 @@ class _GenerateContactState extends State<GenerateContact> {
   TextEditingController address = TextEditingController();
   TextEditingController city = TextEditingController();
   TextEditingController country = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -51,8 +52,7 @@ class _GenerateContactState extends State<GenerateContact> {
               child: SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.all(46),
-                  child: Container(
-                    // constraints: const BoxConstraints(maxHeight: 747),
+                  child: DecoratedBox(
                     decoration: BoxDecoration(
                       color: AppColor.grey.withAlpha(200),
                       borderRadius: BorderRadius.circular(6),
@@ -191,7 +191,7 @@ class _GenerateContactState extends State<GenerateContact> {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
       appBar: ResultAppBar(

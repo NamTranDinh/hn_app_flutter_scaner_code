@@ -12,12 +12,14 @@ import 'package:master_scanner_app/pages/generate/widget/non_glow_scrollable.dar
 
 class GenerateBusiness extends StatefulWidget {
   const GenerateBusiness({super.key});
+
   @override
   _GenerateBusinessState createState() => _GenerateBusinessState();
 }
 
 class _GenerateBusinessState extends State<GenerateBusiness> {
   _GenerateBusinessState();
+
   TextEditingController name = TextEditingController();
   TextEditingController industry = TextEditingController();
   TextEditingController company = TextEditingController();
@@ -28,6 +30,7 @@ class _GenerateBusinessState extends State<GenerateBusiness> {
   TextEditingController address = TextEditingController();
   TextEditingController city = TextEditingController();
   TextEditingController country = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -164,11 +167,11 @@ class _GenerateBusinessState extends State<GenerateBusiness> {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
       appBar: ResultAppBar(
-        title: 'generate.contact'.tr(),
+        title: 'generate.business'.tr(),
         action: () {
           Get.back();
         },
