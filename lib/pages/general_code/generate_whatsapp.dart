@@ -29,6 +29,7 @@ class _GenerateWhatsAppState extends State<GenerateWhatsApp> {
             Get.back();
           },
           controller: controller,
+          validate: (String? v) => null,
         ),
         extendBodyBehindAppBar: true,
         appBar: ResultAppBar(

@@ -54,6 +54,8 @@
     "text": "Text",
     "text_hint": "Enter text",
     "website": "Website",
+    "website_lb": "Website URL",
+    "website_ht": "Website www.qrcode.com",
     "wifi": "Wi-Fi",
     "event": "Event",
     "contact": "Contact",
@@ -108,7 +110,7 @@
     "country_ht": "Enter country"
   },
   "business": {
-     "name_lb": "Company",
+    "name_lb": "Company",
     "name_ht": "Enter name",
     "industry": "Industry",
     "industry_ht": "eg. Food/Agency",

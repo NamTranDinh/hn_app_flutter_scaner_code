@@ -29,6 +29,7 @@ class _GenerateTwitterState extends State<GenerateTwitter> {
             Get.back();
           },
           controller: controller,
+          validate: (String? v) => null,
         ),
         extendBodyBehindAppBar: true,
         appBar: ResultAppBar(

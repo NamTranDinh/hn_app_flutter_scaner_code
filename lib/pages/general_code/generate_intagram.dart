@@ -30,6 +30,9 @@ class _GenerateInstagramState extends State<GenerateInstagram> {
             Get.back();
           },
           controller: controller,
+          validate: (String? v) {
+            return null;
+          },
         ),
         appBar: ResultAppBar(
           title: 'generate.instagram'.tr(),

@@ -36,6 +36,7 @@ class _GenerateTextState extends State<GenerateText> {
           onClick: (data) {
             Get.toNamed(Routes.resultPage, arguments: QrCodeResultModel(data: data));
           },
+          validate: (v) => null,
           controller: controller,
         ),
       );
