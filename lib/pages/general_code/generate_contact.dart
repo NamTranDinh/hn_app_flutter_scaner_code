@@ -143,7 +143,7 @@ class _GenerateContactState extends State<GenerateContact> {
                             label: 'contact.web_lb'.tr(),
                             controller: website,
                             hint: 'contact.web_ht'.tr(),
-                            validate: (value) => null,
+                            validate: (value) => Validator.isWebsite(value) ? null : 'link is not valid',
                           ),
                           const SizedBox(
                             height: 12,

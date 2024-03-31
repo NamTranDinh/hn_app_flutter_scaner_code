@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:master_scanner_app/common/utils/validator.dart';
 import 'package:master_scanner_app/common/widgets/result_appbar.dart';
 import 'package:master_scanner_app/gen/assets.gen.dart';
 import 'package:master_scanner_app/modes/qr_code_result_model.dart';
@@ -42,7 +43,7 @@ class _GenerateEmailState extends State<GenerateEmail> {
             },
             validate: (value) {
               if (value == null || value.trim() == '') {
-                return 'error.required'.tr();
+                return Validator.isEmail(value) ? null : 'email is not valid';
               }
               return null;
             },
