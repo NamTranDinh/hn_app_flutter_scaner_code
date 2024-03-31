@@ -124,5 +124,9 @@
     "city_ht": "Enter city",
     "country_lb": "Country",
     "country_ht": "Enter country"
+  },
+  "error": {
+    "download_error": "Download fail",
+    "download_success": "Download success"
   }
 }

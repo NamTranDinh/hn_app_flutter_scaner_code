@@ -4,11 +4,18 @@ import 'package:master_scanner_app/core/app_color.dart';
 import 'package:master_scanner_app/core/app_text_style.dart';
 
 class ButtonSquare extends StatelessWidget {
-  const ButtonSquare({super.key, required this.onTap, required this.svgIconPath, this.titleButton});
+  const ButtonSquare({
+    super.key,
+    required this.onTap,
+    required this.svgIconPath,
+    this.titleButton,
+    this.isLoading = false,
+  });
 
   final Function() onTap;
   final String svgIconPath;
   final String? titleButton;
+  final bool isLoading;
 
   @override
   Widget build(BuildContext context) => Column(
@@ -18,19 +25,19 @@ class ButtonSquare extends StatelessWidget {
         children: [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              maximumSize: const Size(60, 60),
-              minimumSize: const Size(60, 60),
+              fixedSize: const Size(60, 60),
+              alignment: Alignment.center,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
             ),
             onPressed: onTap,
-            child: Center(
-              child: SvgPicture.asset(
-                svgIconPath,
-                width: 32,
-                fit: BoxFit.contain,
-                colorFilter: const ColorFilter.mode(AppColor.grey, BlendMode.srcIn),
-              ),
-            ),
+            child: isLoading
+                ? const CircularProgressIndicator(color: Colors.white)
+                : SvgPicture.asset(
+                    svgIconPath,
+                    width: 32,
+                    fit: BoxFit.contain,
+                    colorFilter: const ColorFilter.mode(AppColor.grey, BlendMode.srcIn),
+                  ),
           ),
           if (titleButton != null) ...[
             const SizedBox(height: 5),
