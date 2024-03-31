@@ -73,5 +73,17 @@
     "phone": "Phone",
     "phone_hint": "+90xxxxxxx",
     "phone_label": "Phone number"
+  },
+  "event_generate": {
+    "name_lb": "Event Name",
+    "name_ht": "Enter name",
+    "start_lb": "Start Date and Time",
+    "start_ht": "12 Dec 2020,10:40 pm",
+    "end_lb": "End Date and Time",
+    "end_ht": "12 Dec 2020,10:40 pm",
+    "loca_lb": "Event Location",
+    "loca_ht": "Enter location",
+    "des_lb": "Description",
+    "des_hint": "Enter any details"
   }
 }
