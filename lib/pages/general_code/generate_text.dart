@@ -18,6 +18,7 @@ class GenerateText extends StatefulWidget {
 class _GenerateTextState extends State<GenerateText> {
   _GenerateTextState();
 
+  final _formKey = GlobalKey<FormState>();
   final TextEditingController controller = TextEditingController();
 
   @override
@@ -28,15 +29,26 @@ class _GenerateTextState extends State<GenerateText> {
           action: Get.back,
           icon: Assets.icons.iconBack,
         ),
-        body: GenerateSingleInputPage(
-          iconPath: Assets.icons.iconText,
-          appBarLabel: 'generate.text'.tr(),
-          inputLabel: 'generate.text'.tr(),
-          inputHint: 'generate.text_hint'.tr(),
-          onClick: (data) {
-            Get.toNamed(Routes.resultPage, arguments: QrCodeResultModel(data: data));
-          },
-          controller: controller,
+        body: Form(
+          key: _formKey,
+          child: GenerateSingleInputPage(
+            controller: controller,
+            iconPath: Assets.icons.iconText,
+            appBarLabel: 'generate.text'.tr(),
+            inputLabel: 'generate.text'.tr(),
+            inputHint: 'generate.text_hint'.tr(),
+            validate: (value) {
+              if (value == null || value.trim() == '') {
+                return 'error.required'.tr();
+              }
+              return null;
+            },
+            onClick: (data) {
+              if (_formKey.currentState?.validate() ?? false) {
+                Get.toNamed(Routes.resultPage, arguments: QrCodeResultModel(data: data));
+              }
+            },
+          ),
         ),
       );
 }

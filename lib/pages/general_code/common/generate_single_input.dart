@@ -14,11 +14,13 @@ class GenerateSingleInputPage extends StatelessWidget {
     required this.onClick,
     required this.iconPath,
     required this.controller,
+    this.validate,
   });
 
   final String appBarLabel, inputLabel, inputHint, iconPath;
   final Function(String data) onClick;
   final TextEditingController controller;
+  final String? Function(String? value)? validate;
 
   void back() {
     Get.back();
@@ -39,11 +41,10 @@ class GenerateSingleInputPage extends StatelessWidget {
           ),
           Positioned(
             width: 335,
-            height: 336,
             child: SingerInputForm(
               iconPath: iconPath,
               label: inputLabel,
-              validate: (v) => null,
+              validate: (value) => validate != null ? validate!(value) : null,
               hint: inputHint,
               controller: controller,
               onClick: onClick,

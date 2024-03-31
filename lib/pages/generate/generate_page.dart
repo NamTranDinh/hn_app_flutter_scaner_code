@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:master_scanner_app/common/utils/toast_utils.dart';
 import 'package:master_scanner_app/common/widgets/appbar.dart';
 import 'package:master_scanner_app/common/widgets/item_qr.dart';
 import 'package:master_scanner_app/gen/assets.gen.dart';
@@ -87,7 +88,8 @@ class GeneratePage extends StatelessWidget {
                     iconSrc: Assets.icons.itemLocation,
                     textValue: 'generate.location'.tr(),
                     onTap: () {
-                      Get.toNamed(Routes.generateQrLocation);
+                      showToast(mess: 'This feature is developing!');
+                      // Get.toNamed(Routes.generateQrLocation);
                     },
                   ),
                   ItemQr(

@@ -17,7 +17,6 @@ class GenerateEvent extends StatefulWidget {
 }
 
 class _GenerateEventState extends State<GenerateEvent> {
-  _GenerateEventState();
 
   TextEditingController name = TextEditingController();
   TextEditingController startDate = TextEditingController();

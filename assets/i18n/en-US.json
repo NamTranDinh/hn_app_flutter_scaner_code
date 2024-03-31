@@ -127,6 +127,7 @@
   },
   "error": {
     "download_error": "Download fail",
-    "download_success": "Download success"
+    "download_success": "Download success",
+    "required": "Required"
   }
 }
