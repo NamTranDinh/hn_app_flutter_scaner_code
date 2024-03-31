@@ -18,6 +18,7 @@ import 'package:master_scanner_app/gen/assets.gen.dart';
 import 'package:master_scanner_app/modes/qr_code_result_model.dart';
 import 'package:master_scanner_app/pages/qr_code/template_qr_code_download.dart';
 import 'package:screenshot/screenshot.dart';
+import 'package:share_screenshot_widget/share_screenshot_widget.dart';
 
 class QrCodePage extends StatefulWidget {
   const QrCodePage({super.key, required this.data});
@@ -29,6 +30,7 @@ class QrCodePage extends StatefulWidget {
 }
 
 class _QrCodePageState extends State<QrCodePage> {
+  final globalKey = GlobalKey();
   ScreenshotController screenshotController = ScreenshotController();
 
   @override
@@ -53,6 +55,7 @@ class _QrCodePageState extends State<QrCodePage> {
             body: Stack(
               fit: StackFit.expand,
               children: [
+                _template(context, screenshotController),
                 Positioned(
                   top: 0,
                   left: 0,
@@ -109,9 +112,8 @@ class _QrCodePageState extends State<QrCodePage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                // TODO(nam): handle share btn
                                 ButtonSquare(
-                                  onTap: () {},
+                                  onTap: () => shareWidgets(globalKey: globalKey),
                                   svgIconPath: Assets.icons.share,
                                   titleButton: 'button_action.share'.tr(),
                                 ),
@@ -162,9 +164,12 @@ class _QrCodePageState extends State<QrCodePage> {
 
   Widget _template(BuildContext context, ScreenshotController controller) => Screenshot(
         controller: controller,
-        child: TemplateQrCodeDownload(
-          qrCodeWidget: _qrImage(context),
-          size: MediaQuery.of(context).size,
+        child: ShareScreenshotAsImage(
+          globalKey: globalKey,
+          child: TemplateQrCodeDownload(
+            qrCodeWidget: _qrImage(context),
+            size: MediaQuery.of(context).size,
+          ),
         ),
       );
 }

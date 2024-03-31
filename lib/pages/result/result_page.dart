@@ -1,16 +1,18 @@
 import 'package:base_core/base_core.dart' as base_core;
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:master_scanner_app/common/utils/toast_utils.dart';
 import 'package:master_scanner_app/common/widgets/button_square.dart';
 import 'package:master_scanner_app/common/widgets/item_result_detail.dart';
 import 'package:master_scanner_app/common/widgets/result_appbar.dart';
 import 'package:master_scanner_app/gen/assets.gen.dart';
 import 'package:master_scanner_app/modes/qr_code_result_model.dart';
 import 'package:master_scanner_app/routes/routes.dart';
-import 'package:master_scanner_app/service/native_bridge/Copy.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ResultPage extends StatelessWidget {
   const ResultPage({super.key, required this.data});
@@ -47,14 +49,17 @@ class ResultPage extends StatelessWidget {
                     Flexible(
                       child: Scrollbar(
                         child: SingleChildScrollView(
-                          child: ItemResultDetail(
-                            type: 'Data',
-                            data: data.data ?? '',
-                            date: base_core.DateUtils.formatDateTimeToString(
-                              dateTime: base_core.DateUtils.formatStringToDateTime(dateString: data.createDate),
-                              formatter: 'd MMM y, h:mm a',
+                          child: InkWell(
+                            onTap: () {},
+                            child: ItemResultDetail(
+                              type: 'Data',
+                              data: data.data ?? '',
+                              date: base_core.DateUtils.formatDateTimeToString(
+                                dateTime: base_core.DateUtils.formatStringToDateTime(dateString: data.createDate),
+                                formatter: 'd MMM y, h:mm a',
+                              ),
+                              onTapShowQrCode: () => Get.toNamed(Routes.qrCodePage, arguments: data),
                             ),
-                            onTapShowQrCode: () => Get.toNamed(Routes.qrCodePage, arguments: data),
                           ),
                         ),
                       ),
@@ -65,17 +70,22 @@ class ResultPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         ButtonSquare(
-                          onTap: () {
-                            // TODO() : save the image then pass the path to share by intent
-                          },
                           svgIconPath: Assets.icons.share,
+                          onTap: () {
+                            if (data.data?.isNotEmpty ?? false) {
+                              Share.share(data.data ?? '');
+                            } else {
+                              showToast(mess: 'error.no_data_to_share'.tr());
+                            }
+                          },
                           titleButton: 'button_action.share'.tr(),
                         ),
                         const SizedBox(width: 55),
-                        // TODO(nam): handle save btn
                         ButtonSquare(
                           onTap: () {
-                            Copy().invoke(data.data ?? '');
+                            Clipboard.setData(ClipboardData(text: data.data ?? '')).then((value) {
+                              showToast(mess: 'button_action.copied'.tr());
+                            });
                           },
                           svgIconPath: Assets.icons.icSave,
                           titleButton: 'button_action.copy'.tr(),

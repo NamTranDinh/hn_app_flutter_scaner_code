@@ -47,7 +47,8 @@
     "back": "Back",
     "show_more": "Show more",
     "show_less": "Show less",
-    "show_qr_code": "Show QR Code"
+    "show_qr_code": "Show QR Code",
+    "copied": "Copied"
   },
   "generate": {
     "appbar_title": "Generate QR",
@@ -128,6 +129,7 @@
   "error": {
     "download_error": "Download fail",
     "download_success": "Download success",
-    "required": "Required"
+    "required": "Required",
+    "no_data_to_share": "No data to share"
   }
 }

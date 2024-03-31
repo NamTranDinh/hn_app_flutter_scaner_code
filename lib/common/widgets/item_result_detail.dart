@@ -13,10 +13,12 @@ class ItemResultDetail extends StatelessWidget {
     required this.date,
     required this.data,
     required this.onTapShowQrCode,
+    this.isUrl = false,
   });
 
   final String type, date, data;
   final Function() onTapShowQrCode;
+  final bool isUrl;
 
   @override
   Widget build(BuildContext context) => DecoratedBox(
@@ -71,9 +73,13 @@ class ItemResultDetail extends StatelessWidget {
                   data,
                   maxLines: 10,
                   style: AppTextStyle.title3.copyWith(
+                    height: 1.5,
                     fontSize: 17,
-                    color: AppColor.whiteLight,
+                    shadows: [Shadow(color: isUrl ? Colors.blue : Colors.transparent, offset: const Offset(0, -5))],
+                    color: isUrl ? Colors.transparent : AppColor.whiteLight,
                     overflow: TextOverflow.ellipsis,
+                    decoration: isUrl ? TextDecoration.underline : null,
+                    decorationColor: isUrl ? Colors.blue : Colors.transparent,
                   ),
                   expandText: 'button_action.show_more'.tr(),
                   collapseText: 'button_action.show_less'.tr(),
