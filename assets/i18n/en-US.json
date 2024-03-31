@@ -83,8 +83,28 @@
     "end_ht": "12 Dec 2020,10:40 pm",
     "loca_lb": "Event Location",
     "loca_ht": "Enter location",
-
     "des_lb": "Description",
     "des_hint": "Enter any details"
+  },
+  "contact": {
+    "fn_lb": "Firstname",
+    "n_ht": "Enter name",
+    "ln_lb": "Lastname",
+    "comp_lb": "Company",
+    "comp_ht": "Enter company",
+    "job_lb": "Job",
+    "job_ht": "Enter job",
+    "phone_lb": "Phone",
+    "phone_ht": "Enter phone",
+    "email_lb": "Email",
+    "email_ht": "Enter email",
+    "web_lb": "Website",
+    "web_ht": "Enter website",
+    "address_lb": "Address",
+    "address_ht": "Enter address",
+    "city_lb": "City",
+    "city_ht": "Enter city",
+    "country_lb": "Country",
+    "country_ht": "Enter country"
   }
 }

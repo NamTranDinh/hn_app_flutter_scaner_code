@@ -20,7 +20,7 @@ class BridgeChanel() {
                 )
                 )
             }
-        }catch (e){
+        }catch (e:Exception){
             //notifi error
         }
     }
