@@ -106,5 +106,23 @@
     "city_ht": "Enter city",
     "country_lb": "Country",
     "country_ht": "Enter country"
+  },
+  "business": {
+    "name_lb": "Company",
+    "name_ht": "Enter name",
+    "industry": "Industry",
+    "industry_ht": "eg. Food/Agency",
+    "phone_lb": "Phone",
+    "phone_ht": "Enter phone",
+    "email_lb": "Email",
+    "email_ht": "Enter email",
+    "web_lb": "Website",
+    "web_ht": "Enter website",
+    "address_lb": "Address",
+    "address_ht": "Enter address",
+    "city_lb": "City",
+    "city_ht": "Enter city",
+    "country_lb": "Country",
+    "country_ht": "Enter country"
   }
 }

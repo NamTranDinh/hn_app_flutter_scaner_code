@@ -195,7 +195,7 @@ class _GenerateContactState extends State<GenerateContact> {
         ],
       ),
       appBar: ResultAppBar(
-        title: 'generate.email'.tr(),
+        title: 'generate.contact'.tr(),
         action: () {
           Get.back();
         },
