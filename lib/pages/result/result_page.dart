@@ -10,6 +10,7 @@ import 'package:master_scanner_app/common/widgets/result_appbar.dart';
 import 'package:master_scanner_app/gen/assets.gen.dart';
 import 'package:master_scanner_app/modes/qr_code_result_model.dart';
 import 'package:master_scanner_app/routes/routes.dart';
+import 'package:master_scanner_app/service/native_bridge/Copy.dart';
 
 class ResultPage extends StatelessWidget {
   const ResultPage({super.key, required this.data});
@@ -63,16 +64,19 @@ class ResultPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // TODO(nam): handle share btn
                         ButtonSquare(
-                          onTap: () {},
+                          onTap: () {
+                            // TODO() : save the image then pass the path to share by intent
+                          },
                           svgIconPath: Assets.icons.share,
                           titleButton: 'button_action.share'.tr(),
                         ),
                         const SizedBox(width: 55),
                         // TODO(nam): handle save btn
                         ButtonSquare(
-                          onTap: () {},
+                          onTap: () {
+                            Copy().invoke(data.data ?? '');
+                          },
                           svgIconPath: Assets.icons.icSave,
                           titleButton: 'button_action.copy'.tr(),
                         ),

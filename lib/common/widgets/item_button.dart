@@ -23,7 +23,7 @@ class ItemButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) => SizedBox(
         height: 46,
-        width: double.infinity,
+        // width: double.infinity,
         child: ElevatedButton(
           onPressed: onTap,
           style: ElevatedButton.styleFrom(

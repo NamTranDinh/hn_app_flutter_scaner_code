@@ -11,6 +11,7 @@ class ItemTextInput extends StatelessWidget {
     this.action,
     this.keyboard,
     this.validate,
+    this.maxLine,
   });
 
   final TextInputAction? action;
@@ -18,6 +19,7 @@ class ItemTextInput extends StatelessWidget {
   final String label, hint;
   final String? Function(String?)? validate;
   final TextEditingController controller;
+  final int? maxLine;
 
   @override
   Widget build(BuildContext context) => Column(
@@ -57,6 +59,7 @@ class ItemTextInput extends StatelessWidget {
             textInputAction: action ?? TextInputAction.done,
             keyboardType: keyboard ?? TextInputType.text,
             validator: validate,
+            maxLines: maxLine ?? 1,
           ),
         ],
       );

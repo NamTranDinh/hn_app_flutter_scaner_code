@@ -23,7 +23,7 @@ class ItemQrHistory extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColor.grey,
           borderRadius: BorderRadius.circular(6),
-          boxShadow: const [BoxShadow(color: AppColor.pureBlack, blurRadius: 8)],
+          boxShadow: [BoxShadow(color: AppColor.pureBlack.withOpacity(0.3), blurRadius: 8)],
         ),
         child: Padding(
           padding: const EdgeInsets.only(top: 6, bottom: 9, left: 17, right: 9),
