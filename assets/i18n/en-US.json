@@ -55,6 +55,8 @@
     "text": "Text",
     "text_hint": "Enter text",
     "website": "Website",
+    "website_lb": "Website URL",
+    "website_ht": "Website www.qrcode.com",
     "wifi": "Wi-Fi",
     "event": "Event",
     "contact": "Contact",

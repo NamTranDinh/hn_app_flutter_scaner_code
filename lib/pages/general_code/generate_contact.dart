@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/instance_manager.dart';
+import 'package:master_scanner_app/common/utils/validator.dart';
 import 'package:master_scanner_app/common/widgets/item_button.dart';
 import 'package:master_scanner_app/common/widgets/item_text_input.dart';
 import 'package:master_scanner_app/common/widgets/result_appbar.dart';
@@ -124,7 +125,7 @@ class _GenerateContactState extends State<GenerateContact> {
                             label: 'contact.phone_lb'.tr(),
                             controller: phone,
                             hint: 'contact.phone_ht'.tr(),
-                            validate: (value) => null,
+                            validate: (v) => Validator.isPhoneNumber(v) ? null : 'phone number invalid',
                           ),
                           const SizedBox(
                             height: 12,
@@ -133,7 +134,7 @@ class _GenerateContactState extends State<GenerateContact> {
                             label: 'contact.email_lb'.tr(),
                             controller: email,
                             hint: 'contact.email_ht'.tr(),
-                            validate: (value) => null,
+                            validate: (v) => Validator.isEmail(v) ? null : 'email invalid',
                           ),
                           const SizedBox(
                             height: 12,
@@ -142,7 +143,7 @@ class _GenerateContactState extends State<GenerateContact> {
                             label: 'contact.web_lb'.tr(),
                             controller: website,
                             hint: 'contact.web_ht'.tr(),
-                            validate: (value) => null,
+                            validate: (value) => Validator.isWebsite(value) ? null : 'link is not valid',
                           ),
                           const SizedBox(
                             height: 12,
