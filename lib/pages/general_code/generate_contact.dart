@@ -19,16 +19,16 @@ class GenerateContact extends StatefulWidget {
 }
 
 class _GenerateContactState extends State<GenerateContact> {
-  TextEditingController firstName = TextEditingController();
-  TextEditingController lastName = TextEditingController();
-  TextEditingController company = TextEditingController();
-  TextEditingController job = TextEditingController();
-  TextEditingController phone = TextEditingController();
-  TextEditingController email = TextEditingController();
-  TextEditingController website = TextEditingController();
-  TextEditingController address = TextEditingController();
-  TextEditingController city = TextEditingController();
-  TextEditingController country = TextEditingController();
+  TextEditingController firstNameController = TextEditingController();
+  TextEditingController lastNameController = TextEditingController();
+  TextEditingController companyController = TextEditingController();
+  TextEditingController jobController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController websiteController = TextEditingController();
+  TextEditingController addressController = TextEditingController();
+  TextEditingController cityController = TextEditingController();
+  TextEditingController countryController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -67,90 +67,77 @@ class _GenerateContactState extends State<GenerateContact> {
                       padding: const EdgeInsets.only(top: 22, bottom: 42, left: 24, right: 22),
                       child: Column(
                         children: [
-                          SvgPicture.asset(
-                            Assets.icons.iconContact,
-                            colorFilter: const ColorFilter.mode(AppColor.primaryYellow, BlendMode.srcIn),
-                            width: 60,
-                            height: 60,
-                            fit: BoxFit.fill,
+                          Hero(
+                            tag: 'anim-icon-${Assets.icons.iconContact}',
+                            child: SvgPicture.asset(
+                              Assets.icons.iconContact,
+                              colorFilter: const ColorFilter.mode(AppColor.primaryYellow, BlendMode.srcIn),
+                              width: 60,
+                              height: 60,
+                              fit: BoxFit.fill,
+                            ),
                           ),
-                          const SizedBox(
-                            height: 27,
-                          ),
+                          const SizedBox(height: 27),
                           Row(
                             children: [
                               Expanded(
                                 child: ItemTextInput(
                                   label: 'contact.fn_lb'.tr(),
-                                  controller: firstName,
+                                  controller: firstNameController,
                                   hint: 'contact.n_ht'.tr(),
                                   validate: (value) => null,
                                 ),
                               ),
-                              const SizedBox(
-                                width: 22,
-                              ),
+                              const SizedBox(width: 22),
                               Expanded(
                                 child: ItemTextInput(
                                   label: 'contact.name_lb'.tr(),
-                                  controller: lastName,
+                                  controller: lastNameController,
                                   hint: 'contact.n_ht'.tr(),
                                   validate: (value) => null,
                                 ),
                               ),
                             ],
                           ),
-                          const SizedBox(
-                            height: 12,
-                          ),
+                          const SizedBox(height: 12),
                           ItemTextInput(
                             label: 'contact.comp_lb'.tr(),
-                            controller: company,
+                            controller: companyController,
                             hint: 'contact.comp_ht'.tr(),
                             validate: (value) => null,
                           ),
-                          const SizedBox(
-                            height: 12,
-                          ),
+                          const SizedBox(height: 12),
                           ItemTextInput(
                             label: 'contact.job_lb'.tr(),
-                            controller: job,
+                            controller: jobController,
                             hint: 'contact.job_ht'.tr(),
                             validate: (value) => null,
                           ),
-                          const SizedBox(
-                            height: 12,
-                          ),
+                          const SizedBox(height: 12),
                           ItemTextInput(
                             label: 'contact.phone_lb'.tr(),
-                            controller: phone,
+                            controller: phoneController,
                             hint: 'contact.phone_ht'.tr(),
                             validate: (v) => Validator.isPhoneNumber(v) ? null : 'phone number invalid',
                           ),
-                          const SizedBox(
-                            height: 12,
-                          ),
+                          const SizedBox(height: 12),
                           ItemTextInput(
                             label: 'contact.email_lb'.tr(),
-                            controller: email,
+                            controller: emailController,
                             hint: 'contact.email_ht'.tr(),
                             validate: (v) => Validator.isEmail(v) ? null : 'email invalid',
                           ),
-                          const SizedBox(
-                            height: 12,
-                          ),
+                          const SizedBox(height: 12),
                           ItemTextInput(
                             label: 'contact.web_lb'.tr(),
-                            controller: website,
+                            controller: websiteController,
                             hint: 'contact.web_ht'.tr(),
                             validate: (value) => Validator.isWebsite(value) ? null : 'link is not valid',
                           ),
-                          const SizedBox(
-                            height: 12,
-                          ),
+                          const SizedBox(height: 12),
                           ItemTextInput(
                             label: 'contact.address_lb'.tr(),
-                            controller: address,
+                            controller: addressController,
                             hint: 'contact.address_ht'.tr(),
                             validate: (value) => null,
                             maxLine: 3,
@@ -160,27 +147,23 @@ class _GenerateContactState extends State<GenerateContact> {
                               Expanded(
                                 child: ItemTextInput(
                                   label: 'contact.city_lb'.tr(),
-                                  controller: city,
+                                  controller: cityController,
                                   hint: 'contact.city_ht'.tr(),
                                   validate: (value) => null,
                                 ),
                               ),
-                              const SizedBox(
-                                width: 22,
-                              ),
+                              const SizedBox(width: 22),
                               Expanded(
                                 child: ItemTextInput(
                                   label: 'contact.country_lb'.tr(),
-                                  controller: country,
+                                  controller: countryController,
                                   hint: 'contact.country_ht'.tr(),
                                   validate: (value) => null,
                                 ),
                               ),
                             ],
                           ),
-                          const SizedBox(
-                            height: 31,
-                          ),
+                          const SizedBox(height: 31),
                           ItemButton(
                             title: 'wifi_form.title'.tr(),
                             onTap: () {},
@@ -197,11 +180,24 @@ class _GenerateContactState extends State<GenerateContact> {
       ),
       appBar: ResultAppBar(
         title: 'generate.contact'.tr(),
-        action: () {
-          Get.back();
-        },
+        action: Get.back,
         icon: Assets.icons.iconBack,
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    firstNameController.dispose();
+    lastNameController.dispose();
+    companyController.dispose();
+    jobController.dispose();
+    phoneController.dispose();
+    emailController.dispose();
+    websiteController.dispose();
+    addressController.dispose();
+    cityController.dispose();
+    countryController.dispose();
+    super.dispose();
   }
 }

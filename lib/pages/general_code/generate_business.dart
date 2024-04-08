@@ -15,22 +15,20 @@ class GenerateBusiness extends StatefulWidget {
   const GenerateBusiness({super.key});
 
   @override
-  _GenerateBusinessState createState() => _GenerateBusinessState();
+  State<GenerateBusiness> createState() => _GenerateBusinessState();
 }
 
 class _GenerateBusinessState extends State<GenerateBusiness> {
-  _GenerateBusinessState();
-
-  TextEditingController name = TextEditingController();
-  TextEditingController industry = TextEditingController();
-  TextEditingController company = TextEditingController();
-  TextEditingController job = TextEditingController();
-  TextEditingController phone = TextEditingController();
-  TextEditingController email = TextEditingController();
-  TextEditingController website = TextEditingController();
-  TextEditingController address = TextEditingController();
-  TextEditingController city = TextEditingController();
-  TextEditingController country = TextEditingController();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController industryController = TextEditingController();
+  TextEditingController companyController = TextEditingController();
+  TextEditingController jobController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController websiteController = TextEditingController();
+  TextEditingController addressController = TextEditingController();
+  TextEditingController cityController = TextEditingController();
+  TextEditingController countryController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -69,64 +67,55 @@ class _GenerateBusinessState extends State<GenerateBusiness> {
                       padding: const EdgeInsets.only(top: 22, bottom: 42, left: 24, right: 22),
                       child: Column(
                         children: [
-                          SvgPicture.asset(
-                            Assets.icons.itemBusiness,
-                            colorFilter: const ColorFilter.mode(AppColor.primaryYellow, BlendMode.srcIn),
-                            width: 60,
-                            height: 60,
-                            fit: BoxFit.fill,
+                          Hero(
+                            tag: 'anim-icon-${Assets.icons.itemBusiness}',
+                            child: SvgPicture.asset(
+                              Assets.icons.itemBusiness,
+                              colorFilter: const ColorFilter.mode(AppColor.primaryYellow, BlendMode.srcIn),
+                              width: 60,
+                              height: 60,
+                              fit: BoxFit.fill,
+                            ),
                           ),
-                          const SizedBox(
-                            height: 27,
-                          ),
+                          const SizedBox(height: 27),
                           ItemTextInput(
                             label: 'business.name_lb'.tr(),
-                            controller: name,
+                            controller: nameController,
                             hint: 'business.name_ht'.tr(),
                             validate: (value) => null,
                           ),
-                          const SizedBox(
-                            height: 12,
-                          ),
+                          const SizedBox(height: 12),
                           ItemTextInput(
                             label: 'business.industry'.tr(),
-                            controller: industry,
+                            controller: industryController,
                             hint: 'business.industry_ht'.tr(),
                             validate: (value) => null,
                           ),
-                          const SizedBox(
-                            height: 12,
-                          ),
+                          const SizedBox(height: 12),
                           ItemTextInput(
                             label: 'business.phone_lb'.tr(),
-                            controller: phone,
+                            controller: phoneController,
                             hint: 'business.phone_ht'.tr(),
                             validate: (v) => Validator.isPhoneNumber(v) ? null : 'phone number invalid',
                           ),
-                          const SizedBox(
-                            height: 12,
-                          ),
+                          const SizedBox(height: 12),
                           ItemTextInput(
                             label: 'business.email_lb'.tr(),
-                            controller: email,
+                            controller: emailController,
                             hint: 'business.email_ht'.tr(),
                             validate: (v) => Validator.isEmail(v) ? null : 'email invalid',
                           ),
-                          const SizedBox(
-                            height: 12,
-                          ),
+                          const SizedBox(height: 12),
                           ItemTextInput(
                             label: 'business.web_lb'.tr(),
-                            controller: website,
+                            controller: websiteController,
                             hint: 'business.web_ht'.tr(),
                             validate: (v) => Validator.isWebsite(v) ? null : 'link invalid',
                           ),
-                          const SizedBox(
-                            height: 12,
-                          ),
+                          const SizedBox(height: 12),
                           ItemTextInput(
                             label: 'business.address_lb'.tr(),
-                            controller: address,
+                            controller: addressController,
                             hint: 'business.address_ht'.tr(),
                             validate: (value) => null,
                             maxLine: 3,
@@ -136,7 +125,7 @@ class _GenerateBusinessState extends State<GenerateBusiness> {
                               Expanded(
                                 child: ItemTextInput(
                                   label: 'business.city_lb'.tr(),
-                                  controller: city,
+                                  controller: cityController,
                                   hint: 'business.city_ht'.tr(),
                                   validate: (value) => null,
                                 ),
@@ -147,7 +136,7 @@ class _GenerateBusinessState extends State<GenerateBusiness> {
                               Expanded(
                                 child: ItemTextInput(
                                   label: 'business.country_lb'.tr(),
-                                  controller: country,
+                                  controller: countryController,
                                   hint: 'business.country_ht'.tr(),
                                   validate: (value) => null,
                                 ),
@@ -173,11 +162,24 @@ class _GenerateBusinessState extends State<GenerateBusiness> {
       ),
       appBar: ResultAppBar(
         title: 'generate.business'.tr(),
-        action: () {
-          Get.back();
-        },
+        action: Get.back,
         icon: Assets.icons.iconBack,
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    nameController.dispose();
+    industryController.dispose();
+    companyController.dispose();
+    jobController.dispose();
+    phoneController.dispose();
+    emailController.dispose();
+    websiteController.dispose();
+    addressController.dispose();
+    cityController.dispose();
+    countryController.dispose();
+    super.dispose();
   }
 }

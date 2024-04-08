@@ -24,7 +24,7 @@ class _GenerateTwitterState extends State<GenerateTwitter> {
         body: Form(
           key: _formKey,
           child: GenerateSingleInputPage(
-            iconPath: Assets.icons.iconText,
+            iconPath: Assets.icons.iconBird,
             appBarLabel: 'generate.twitter'.tr(),
             inputLabel: 'generate.twitter_label'.tr(),
             inputHint: 'generate.twitter_hint'.tr(),

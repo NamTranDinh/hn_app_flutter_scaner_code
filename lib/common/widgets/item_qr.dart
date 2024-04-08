@@ -26,11 +26,14 @@ class ItemQr extends StatelessWidget {
                 ],
               ),
               child: Center(
-                child: SvgPicture.asset(
-                  iconSrc,
-                  width: 34,
-                  fit: BoxFit.contain,
-                  colorFilter: const ColorFilter.mode(AppColor.grey, BlendMode.color),
+                child: Hero(
+                  tag: 'anim-icon-$iconSrc',
+                  child: SvgPicture.asset(
+                    iconSrc,
+                    width: 34,
+                    fit: BoxFit.contain,
+                    colorFilter: const ColorFilter.mode(AppColor.grey, BlendMode.color),
+                  ),
                 ),
               ),
             ),
@@ -41,9 +44,12 @@ class ItemQr extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 8),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(color: AppColor.whiteLight, borderRadius: BorderRadius.circular(4)),
-                child: Text(
-                  textValue,
-                  style: const TextStyle(color: AppColor.naviBlue, fontSize: 12),
+                child: Hero(
+                  tag: 'anim-title-$textValue',
+                  child: Text(
+                    textValue,
+                    style: const TextStyle(color: AppColor.naviBlue, fontSize: 12),
+                  ),
                 ),
               ),
             ),

@@ -53,12 +53,15 @@ class ResultAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 29),
-                child: Text(
-                  title,
-                  style: AppTextStyle.title1.copyWith(
-                    color: AppColor.blackD9,
-                    fontSize: 27,
-                    fontWeight: FontWeight.w400,
+                child: Hero(
+                  tag: 'anim-title-$title',
+                  child: Text(
+                    title,
+                    style: AppTextStyle.title1.copyWith(
+                      color: AppColor.blackD9,
+                      fontSize: 27,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                 ),
               ),

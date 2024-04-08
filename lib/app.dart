@@ -13,6 +13,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) => GetMaterialApp(
         title: F.title,
+        builder: (context, child) => Material(child: child),
         navigatorObservers: [ChuckerFlutter.navigatorObserver],
         getPages: AppRouter().routes,
         useInheritedMediaQuery: true,

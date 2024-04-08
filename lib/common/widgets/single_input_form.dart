@@ -37,12 +37,15 @@ class SingerInputForm extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              SvgPicture.asset(
-                iconPath,
-                colorFilter: const ColorFilter.mode(AppColor.primaryYellow, BlendMode.srcIn),
-                width: 60,
-                height: 60,
-                fit: BoxFit.fill,
+              Hero(
+                tag: 'anim-icon-$iconPath',
+                child: SvgPicture.asset(
+                  iconPath,
+                  colorFilter: const ColorFilter.mode(AppColor.primaryYellow, BlendMode.srcIn),
+                  width: 60,
+                  height: 60,
+                  fit: BoxFit.fill,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 18, bottom: 48),
