@@ -20,12 +20,12 @@ class GeneratePage extends StatelessWidget {
           CustomAppBar(title: 'generate.appbar_title'.tr(), action: () {}),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(left: 21, right: 21),
+              padding: const EdgeInsets.only(left: 13, right: 13),
               child: GridView(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
-                  mainAxisSpacing: 34,
-                  crossAxisSpacing: 34,
+                  mainAxisSpacing: 13,
+                  crossAxisSpacing: 13,
                 ),
                 children: [
                   ItemQr(
